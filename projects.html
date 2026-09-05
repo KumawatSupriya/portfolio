@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Sparkling Rhythm (Supriya Kumawat)</title>
+  <meta name="description" content="Explore a collection of graphic design, branding, editorial design, UI design, digital art, 2D animation, and 3D creative projects by Supriya Kumawat.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="images/Sparkling_Rhythm/8_Sparkling_Logo.webp">
+
+  <!-- Lucide Icon Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="css/palette.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Reusable Header Component -->
+  <header id="site-header" data-page="projects"></header>
+
+  <!-- ==========================================================================
+       1. PORTFOLIO HERO HEADER
+       ========================================================================== -->
+  <section class="hero-section">
+    <canvas id="hero-canvas-1" class="hero-canvas-bg"></canvas>
+
+    <div class="container">
+      <div class="spatial-glass-card">
+        <div class="spatial-tilt-content">
+          <div class="section-tag"><i data-lucide="sparkles" class="icon-inline"></i> My Portfolio</div>
+
+          <h1 class="hero-title">
+            A Collection of My <span class="gradient-text magnetic-title">Creative Work</span>
+          </h1>
+
+          <p class="hero-description">
+            Explore a collection of my graphic design, branding, editorial design, UI design, digital art and creative projects. Each project represents an idea, an experiment or a visual problem I enjoyed bringing to life.
+          </p>
+
+          <div class="tag-group" style="justify-content: center; margin-top: 1.5rem;">
+            <span class="badge"><i data-lucide="award" class="icon-inline"></i> Branding & Logos</span>
+            <span class="badge"><i data-lucide="book-open" class="icon-inline"></i> Book & Editorial</span>
+            <span class="badge"><i data-lucide="palette" class="icon-inline"></i> Graphic Design</span>
+            <span class="badge"><i data-lucide="video" class="icon-inline"></i> Animation</span>
+            <span class="badge"><i data-lucide="box" class="icon-inline"></i> 3D Models</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED REBRANDING SPOTLIGHT: IHOP CONCEPTUAL REDESIGN
+       ========================================================================== -->
+  <section class="section-spacing" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+    <div class="container">
+      <div class="glass-card book-exp-card reveal" style="border-color: var(--clr-coral-red);">
+        <div class="timeline-header">
+          <span class="badge" style="background: rgba(240, 83, 101, 0.15); color: var(--clr-coral-red);">
+            <i data-lucide="sparkles" class="icon-inline"></i> Featured Personal Rebranding Spotlight
+          </span>
+          <span class="timeline-year"><i data-lucide="award" class="icon-inline"></i> Personal Project</span>
+        </div>
+
+        <div class="grid-2" style="align-items: center; margin-top: 1.5rem; gap: 2.5rem;">
+          <div>
+            <h2 style="font-size: 1.8rem; margin-bottom: 0.8rem;">IHOP — Conceptual Logo Redesign</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+              A complete conceptual logo redesign exploring a fresh visual direction rather than modifying the original identity. Features a custom pictorial symbol, typography system, ideation mindmaps, and real-world mockups.
+            </p>
+
+            <div class="tag-group" style="margin-bottom: 2rem;">
+              <span class="tag-chip">01. Ideation Sketches</span>
+              <span class="tag-chip">02. Pictorial Symbol Mark</span>
+              <span class="tag-chip">03. Custom Typography</span>
+              <span class="tag-chip">04. Storefront & Apparel Mockups</span>
+            </div>
+
+            <button class="btn btn-primary" onclick="openLightbox('ihop-rebranding')">
+              <span>View IHOP Case Study</span>
+              <i data-lucide="arrow-right" class="icon-inline"></i>
+            </button>
+          </div>
+
+          <div style="border-radius: var(--border-radius-md); overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); cursor: pointer;" onclick="openLightbox('ihop-rebranding')">
+            <img src="images/Sparkling_Rhythm/1_Branding/1_IHOP_Images/Thumbnail_Mockup_IHOP.webp" alt="IHOP Rebranding Concept" style="width:100%; height: auto; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALLERY FILTER CONTROLS & LIVE SEARCH
+       ========================================================================== -->
+  <section class="section-spacing" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <!-- Live Search Input -->
+      <div class="search-input-wrapper">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="project-search-input" class="search-input" placeholder="Search my projects...">
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-controls-strip" id="filter-controls">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="animation">Animation</button>
+        <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+        <button class="filter-btn" data-filter="book-editorial">Book & Editorial</button>
+        <button class="filter-btn" data-filter="digital-art">Digital Art</button>
+        <button class="filter-btn" data-filter="3d">3D</button>
+      </div>
+
+      <!-- Dynamic Projects Grid -->
+      <div id="projects-grid" class="grid-3"></div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PORTFOLIO CLOSING CTA
+       ========================================================================== -->
+  <section class="section-spacing">
+    <div class="container">
+      <div class="spatial-glass-card text-center" style="padding: 4rem 2rem;">
+        <div class="section-tag" style="display:inline-flex; margin-bottom: 1rem;">
+          <i data-lucide="message-square" class="icon-inline"></i> Have a Project in Mind?
+        </div>
+        
+        <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">
+          Let's Create Something Meaningful.
+        </h2>
+
+        <p style="max-width: 650px; margin: 0 auto 2rem auto; color: var(--text-muted); font-size: 1.1rem; line-height: 1.7;">
+          Whether it's a brand identity, book, poster, UI concept, digital artwork or something completely new, I'd love to explore the idea with you.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+          <span>Get In Touch</span>
+          <i data-lucide="arrow-right" class="icon-inline"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reusable Footer Component -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Projects Gallery Filter & Search Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProjectsGrid('all', '');
+      initFilterControls();
+      initSearchInput();
+    });
+
+    function renderProjectsGrid(activeCategory, searchQuery) {
+      const grid = document.getElementById('projects-grid');
+      if (!grid || typeof projectsData === 'undefined') return;
+
+      const query = searchQuery.toLowerCase().trim();
+
+      const filtered = projectsData.filter(p => {
+        const matchesCategory = activeCategory === 'all' || p.category === activeCategory;
+        const matchesQuery = !query || 
+          p.title.toLowerCase().includes(query) || 
+          p.description.toLowerCase().includes(query) ||
+          p.tools.some(t => t.toLowerCase().includes(query)) ||
+          p.categoryLabel.toLowerCase().includes(query);
+
+        return matchesCategory && matchesQuery;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="glass-card" style="grid-column: 1 / -1; padding: 4rem; text-align: center;">
+            <i data-lucide="folder-search" style="width:48px;height:48px;color:var(--clr-coral-red);margin-bottom:1rem;"></i>
+            <h3>No projects found matching "${searchQuery}"</h3>
+            <p style="margin-top:0.5rem;color:var(--text-muted);">Try searching for another keyword like "Atma", "IHOP", "Sahaj", "Fresco", or "Maya".</p>
+          </div>
+        `;
+        if (window.lucide) lucide.createIcons();
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <div class="glass-card project-card reveal active">
+          <div class="project-thumb-wrapper" onclick="openLightbox('${p.id}')" style="cursor:pointer;">
+            ${p.primaryImage.toLowerCase().endsWith('.webm') || p.primaryImage.toLowerCase().endsWith('.mp4') ?
+              `<video src="${p.primaryImage}#t=0.5" preload="metadata" muted loop autoplay style="width:100%;height:100%;object-fit:cover;"></video>` :
+              `<img src="${p.primaryImage}" alt="${p.title}" class="project-thumb-img">`
+            }
+            ${p.mediaType === 'video' ? `<div class="video-play-badge"><i data-lucide="play-circle" style="width:36px;height:36px;"></i></div>` : ''}
+          </div>
+          <div class="project-card-body">
+            <div class="project-category-badge">
+              <i data-lucide="tag" class="icon-inline"></i> ${p.categoryLabel}
+            </div>
+            <h3 class="project-card-title">${p.title}</h3>
+            <p class="project-card-desc">${p.description}</p>
+
+            <button class="btn btn-secondary" onclick="openLightbox('${p.id}')" style="width:100%; justify-content: space-between;">
+              <span>View Project</span>
+              <i data-lucide="arrow-right" class="icon-inline"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function initFilterControls() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const category = btn.getAttribute('data-filter');
+          const searchVal = document.getElementById('project-search-input').value;
+          renderProjectsGrid(category, searchVal);
+        });
+      });
+    }
+
+    function initSearchInput() {
+      const searchInput = document.getElementById('project-search-input');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const activeBtn = document.querySelector('.filter-btn.active');
+          const activeCategory = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+          renderProjectsGrid(activeCategory, e.target.value);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
+

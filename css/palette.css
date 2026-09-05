@@ -1,0 +1,114 @@
+/* ==========================================================================
+   SPARKLING RHYTHM PORTFOLIO - LOGO-MATCHED COLOR PALETTE & THEME TOKENS
+   --------------------------------------------------------------------------
+   Derived directly from Sparkling_Logo.png:
+   - Warm Luxury Cream (#FAF7F2 - Light Canvas)
+   - Deep Midnight Navy (#0C121E - Dark Canvas & Light Text)
+   - Coral Red (#F05365) - Warm Leaf Highlight
+   - Amber Gold (#FFB703) - Vibrant Energy Leaf
+   - Ocean Cyan (#48CAE4) - Soft Teal Leaf
+   - Plum Berry (#9B487A) - Rich Purple Leaf
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DEFAULT THEME: LIGHT MODE (Warm Cream Logo Canvas Base)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Leaf Palette Accents */
+  --clr-coral-red: #F05365;     /* Warm Coral Red */
+  --clr-amber-gold: #D97706;    /* Warm Amber Gold (Adjusted for high-contrast light bg) */
+  --clr-teal-cyan: #0284C7;     /* Ocean Cyan Accent */
+  --clr-plum-berry: #9B487A;    /* Rich Plum Berry */
+  --clr-cream-light: #FAF7F2;   /* Luxury Off-white Cream */
+
+  /* Legacy Mapping for Component Compatibility */
+  --clr-icy-blue: #0F172A;
+  --clr-candy-pink: var(--clr-coral-red);
+  --clr-mauve-rose: var(--clr-teal-cyan);
+  --clr-vanilla: var(--clr-amber-gold);
+
+  /* Surface & Backgrounds - Light Theme Default */
+  --bg-deep: #FAF7F2;           /* Warm Luxury Off-White Canvas */
+  --bg-surface: #FFFFFF;        /* Elevated Pure White Cards */
+  --bg-elevated: #F3EFE9;       /* Soft Surface Hover State */
+
+  /* Glassmorphism Tokens - Light Mode */
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-bg-hover: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(15, 23, 42, 0.09);
+  --glass-border-hover: rgba(240, 83, 101, 0.4);
+  --glass-shadow: 0 15px 35px rgba(15, 23, 42, 0.06);
+  --glass-glow-pink: 0 10px 25px rgba(240, 83, 101, 0.15);
+  --glass-glow-cyan: 0 10px 25px rgba(2, 132, 199, 0.15);
+  --glass-glow-gold: 0 10px 25px rgba(217, 119, 6, 0.15);
+  --glass-blur: blur(16px);
+  --glass-reflection: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 100%);
+
+  /* Text Colors - Light Mode */
+  --text-main: #0F172A;         /* Deep Navy Slate Primary Text */
+  --text-muted: #475569;        /* Muted Slate Body Text */
+  --text-subtle: #64748B;       /* Subtle Label Text */
+  --text-accent: var(--clr-coral-red);
+  --text-inverse: #FAF7F2;      /* Off-White Text for Dark Elements */
+
+  /* Gradients */
+  --grad-sparkling: linear-gradient(135deg, #F05365 0%, #D97706 35%, #0284C7 70%, #9B487A 100%);
+  --grad-coral-gold: linear-gradient(135deg, #F05365 0%, #D97706 100%);
+  --grad-cyan-plum: linear-gradient(135deg, #0284C7 0%, #9B487A 100%);
+  --grad-pink-rose: linear-gradient(135deg, #F05365 0%, #D97706 100%);
+  --grad-accent-text: linear-gradient(135deg, #F05365 0%, #D97706 33%, #0284C7 66%, #0F172A 100%);
+  --grad-liquid-glow: radial-gradient(circle at 50% 0%, rgba(240, 83, 101, 0.08), rgba(2, 132, 199, 0.05) 50%, transparent 75%);
+
+  /* Radii & Transitions */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 9999px;
+
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   DARK THEME OVERRIDES ([data-theme="dark"])
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  /* Brand Leaf Palette Accents */
+  --clr-amber-gold: #FFB703;    /* Bright Gold for dark background */
+  --clr-teal-cyan: #48CAE4;     /* Electric Ocean Cyan */
+
+  /* Legacy Mapping */
+  --clr-icy-blue: #FAF6F0;
+  --clr-vanilla: var(--clr-amber-gold);
+
+  /* Surface & Backgrounds - Dark Theme */
+  --bg-deep: #0C121E;           /* Midnight Navy Canvas */
+  --bg-surface: #141C2D;        /* Elevated Dark Navy Surface */
+  --bg-elevated: #1B263B;       /* Navy Hover Surface */
+
+  /* Glassmorphism Tokens - Dark Mode */
+  --glass-bg: rgba(20, 28, 45, 0.65);
+  --glass-bg-hover: rgba(27, 38, 59, 0.85);
+  --glass-border: rgba(72, 202, 228, 0.15);
+  --glass-border-hover: rgba(240, 83, 101, 0.4);
+  --glass-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+  --glass-glow-pink: 0 10px 30px rgba(240, 83, 101, 0.25);
+  --glass-glow-cyan: 0 10px 30px rgba(72, 202, 228, 0.25);
+  --glass-glow-gold: 0 10px 30px rgba(255, 183, 3, 0.25);
+  --glass-reflection: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(255, 255, 255, 0) 100%);
+
+  /* Text Colors - Dark Mode */
+  --text-main: #FAF6F0;         /* Cream Light Primary Text */
+  --text-muted: #A0AEC0;        /* Muted Light Slate */
+  --text-subtle: #64748B;       /* Subtle Label */
+  --text-inverse: #0C121E;      /* Dark Text for Light Elements */
+
+  /* Gradients - Dark Mode */
+  --grad-sparkling: linear-gradient(135deg, #F05365 0%, #FFB703 35%, #48CAE4 70%, #9B487A 100%);
+  --grad-coral-gold: linear-gradient(135deg, #F05365 0%, #FFB703 100%);
+  --grad-cyan-plum: linear-gradient(135deg, #48CAE4 0%, #9B487A 100%);
+  --grad-pink-rose: linear-gradient(135deg, #F05365 0%, #FFB703 100%);
+  --grad-accent-text: linear-gradient(135deg, #F05365 0%, #FFB703 33%, #48CAE4 66%, #FAF6F0 100%);
+  --grad-liquid-glow: radial-gradient(circle at 50% 0%, rgba(240, 83, 101, 0.15), rgba(72, 202, 228, 0.08) 50%, transparent 75%);
+}
