@@ -406,12 +406,13 @@ const projectsData = [
     description: "Photo cleanup & colorization studies alongside creative typography experiments with clipping masks and text blends.",
     detailsText: "A collection of photo restoration work focused on repairing older photographs, paired with letterform and clipping mask typography explorations.",
     tools: ["Photo Restoration", "Retouching", "Typography", "Clipping Mask"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Photo_Restoration/b&w to colourful.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Photo_Restoration and topology/Thumbnail.webp",
     mediaType: "image",
     gallery: [
-      { url: "images/Sparkling_Rhythm/3_Graphic_Design/Photo_Restoration/b&w to colourful.webp", caption: "01. Photo Restoration & Colorization Study" },
-      { url: "images/Sparkling_Rhythm/3_Graphic_Design/Typography/3_clipping.webp", caption: "02. Clipping Mask Typography Exploration" },
-      { url: "images/Sparkling_Rhythm/3_Graphic_Design/Typography/2_supriya blend.webp", caption: "03. Typography Letterform Blend" }
+      { url: "images/Sparkling_Rhythm/3_Graphic_Design/Photo_Restoration and topology/Thumbnail.webp", caption: "01. Photo Restoration & Topology Cover" },
+      { url: "images/Sparkling_Rhythm/3_Graphic_Design/Photo_Restoration and topology/b&w to colourful.webp", caption: "02. Photo Restoration & Colorization Study" },
+      { url: "images/Sparkling_Rhythm/3_Graphic_Design/Photo_Restoration and topology/3_clipping.webp", caption: "03. Clipping Mask Typography Exploration" },
+      { url: "images/Sparkling_Rhythm/3_Graphic_Design/Photo_Restoration and topology/2_supriya blend.webp", caption: "04. Typography Letterform Blend" }
     ]
   },
 
