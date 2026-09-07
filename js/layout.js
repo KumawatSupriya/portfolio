@@ -142,8 +142,24 @@ function initMobileNav() {
   const mobileDrawer = document.getElementById('mobile-drawer');
 
   if (hamburgerBtn && mobileDrawer) {
-    hamburgerBtn.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('open');
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = mobileDrawer.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active', isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileDrawer.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        mobileDrawer.classList.remove('open');
+        hamburgerBtn.classList.remove('active');
+      }
+    });
+
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        hamburgerBtn.classList.remove('active');
+      });
     });
   }
 }
