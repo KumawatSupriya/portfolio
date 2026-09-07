@@ -355,7 +355,7 @@ const projectsData = [
   },
   {
     id: "posters-campaign-series",
-    title: "Posters & Public Awareness Campaign Series",
+    title: "Poster and storyboard",
     category: "graphic-design",
     categoryLabel: "Poster Design",
     isFeatured: false,
