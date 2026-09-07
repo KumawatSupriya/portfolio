@@ -39,7 +39,7 @@ const projectsData = [
     description: "A multi-page book designed for Brahma Kumaris, focusing on structured editorial layouts, typography, visual hierarchy and a calm, readable presentation.",
     detailsText: "129 Pages + Cover. A 129-page book design project created for Brahma Kumaris with a focus on maintaining consistency across a long-form publication. The project includes the complete page layout and cover design in Adobe InDesign, combining structured information and elegant typography for a clean editorial experience.",
     tools: ["129 Inner Pages", "Adobe InDesign", "Editorial Layout", "Typography", "Print Design"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/1_Atma_Samvaad_/1_Atma_Samvaad_.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/1_Atma_Samvaad_/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/1_Atma_Samvaad_/1_Atma_Samvaad_.webp", caption: "01. Book Cover & Title Design" },
@@ -57,7 +57,7 @@ const projectsData = [
     description: "A recipe book designed to present approximately 71 recipes across 93 inner pages with clear layouts, organized typography and an approachable visual style.",
     detailsText: "71 Recipes · 93 Pages + Cover. A recipe book featuring 71 recipes, designed across 93 pages along with its cover. The focus was on organizing a large amount of recipe content into a clear, readable, and visually consistent publication using Adobe InDesign.",
     tools: ["71 Recipes", "93 Inner Pages", "Adobe InDesign", "Editorial Design", "Page Layout"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/3_Sahaj_Rasoi/book cover page.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/3_Sahaj_Rasoi/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/3_Sahaj_Rasoi/book cover page.webp", caption: "01. Recipe Book Cover Page" },
@@ -78,7 +78,7 @@ const projectsData = [
     description: "My own creative identity representing my journey as a graphic designer and visual creative. The identity brings together design, art, colour and imagination.",
     detailsText: "Sparkling Rhythm represents my personal creative identity. The logomark features a lightbulb base bursting into organic, multi-colored leaf sparks symbolizing ideas, growth, and visual rhythm. The brand identity encompasses logo design, design thinking documentation, vector motion sketches, and brand guidelines.",
     tools: ["Personal Branding", "Logo / Identity", "Visual Direction", "Graphic Design", "Creative Identity"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Logo_Design_By_me/8_Sparkling_Logo.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Logo_Design_By_me/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Logo_Design_By_me/8_Sparkling_Logo.webp", caption: "01. Primary Sparkling Rhythm Logo Mark" },
@@ -149,7 +149,7 @@ const projectsData = [
     description: "A digital artwork created in Adobe Fresco, exploring color, lighting, composition and expressive digital painting.",
     detailsText: "A digital artwork created in Adobe Fresco using a combination of custom brushes and digital painting techniques, focusing on vibrant lighting, sacred composition, and intricate brushwork.",
     tools: ["Digital Art", "Adobe Fresco", "Digital Painting", "Colour & Composition"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Art_Design/Shree_Krishna.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Art_Design/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Art_Design/Shree_Krishna.webp", caption: "01. Full Digital Painting — Shree Krishna" }
@@ -169,7 +169,7 @@ const projectsData = [
     description: "A 32-page report designed as part of seva work, combining structured information, typography and visual organization for a clean editorial experience.",
     detailsText: "32 Pages + Cover. A 32-page report book designed for Prabhu Ratna Pratiyogita Seva. The project involved creating the complete inner-page layout along with the cover, maintaining a structured and readable visual system throughout the publication in Adobe InDesign.",
     tools: ["32 Pages", "Adobe InDesign", "Report Design", "Editorial Layout", "Print Design"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/2_PRC_Report/PRC_Coverpage.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/2_PRC_Report/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/2_PRC_Report/PRC_Coverpage.webp", caption: "01. Report Book Cover Page" },
@@ -188,7 +188,7 @@ const projectsData = [
     description: "A 43-page report book documenting a Tirandaji Prashikshan Seminar at Tapovan, with emphasis on structured information and clean layouts.",
     detailsText: "43 Pages + Cover. A 43-page report book documenting a Tirandaji Prashikshan Evam Seminar at Tapovan. The project includes the complete inner-page design and cover, with emphasis on structured information and consistent page layouts.",
     tools: ["43 Pages", "Adobe InDesign", "Report Design", "Editorial Layout", "Cover Design"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/4_Tapovan/1_Tapovanfrontpage.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/4_Tapovan/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Books_Images/4_Tapovan/1_Tapovanfrontpage.webp", caption: "01. Tapovan Report Front Cover Page" },
@@ -212,7 +212,7 @@ const projectsData = [
     description: "An animated version of the Sparkling Rhythm logo created in After Effects to give the brand a dynamic visual identity through motion and timing.",
     detailsText: "An animated version of the Sparkling Rhythm logo created to give the brand a dynamic visual identity. The logo elements were brought to life through motion and timing, creating a short brand animation in Adobe After Effects.",
     tools: ["Adobe After Effects", "Motion Graphics", "Logo Animation", "Timing", "Visual Effects"],
-    primaryImage: "images/Sparkling_Rhythm/2_Animation/1_Sparkling_Rhythm_Motion_Graphics/S_R_motion.webp",
+    primaryImage: "images/Sparkling_Rhythm/2_Animation/1_Sparkling_Rhythm_Motion_Graphics/Thumbnail.webp",
     mediaType: "video",
     videoUrl: "images/Sparkling_Rhythm/2_Animation/1_Sparkling_Rhythm_Motion_Graphics/Motion graphics .webm",
     gallery: [
@@ -230,7 +230,7 @@ const projectsData = [
     description: "A 2D animated storytelling project developed around the concept 'The Light Within Us', featuring storyboarding, character design, and scene planning.",
     detailsText: "A 2D animated storytelling project developed around the concept “The Light Within Us.” The project included storyboarding and visual planning before creating the animation in Adobe Animate CC and Photoshop.",
     tools: ["Adobe Animate", "Photoshop", "Storyboarding", "2D Animation", "Scene Planning"],
-    primaryImage: "images/Sparkling_Rhythm/2_Animation/2_Light_Witin_Us/Light_within_Us.webp",
+    primaryImage: "images/Sparkling_Rhythm/2_Animation/2_Light_Witin_Us/Thumbnail.webp",
     mediaType: "video",
     videoUrl: "images/Sparkling_Rhythm/2_Animation/2_Light_Witin_Us/2min movie.webm",
     gallery: [
@@ -267,7 +267,7 @@ const projectsData = [
     description: "A study of character movement and timing through different walking cycles, including Front Walk, Side Walk, and Baby Crawl Cycle.",
     detailsText: "A study of character movement and animation timing through different walking cycles. The project explores movement from multiple views along with a baby crawl cycle and bone tool rigging.",
     tools: ["Character Animation", "Walk Cycles", "Motion Study", "Timing", "Bone Tool"],
-    primaryImage: "images/Sparkling_Rhythm/2_Animation/3_Frront_Walk_Cycle/2_Front_walk_cycle.webp",
+    primaryImage: "images/Sparkling_Rhythm/2_Animation/3_Frront_Walk_Cycle/Thumbnail.webp",
     mediaType: "video",
     videoUrl: "images/Sparkling_Rhythm/2_Animation/3_Frront_Walk_Cycle/3_Walk Cycle.webm",
     gallery: [
@@ -289,7 +289,7 @@ const projectsData = [
     description: "Exercises exploring movement: Girl Blowing a Boat, Butterfly Animation, Fish Swimming, Hard Work, and Train Path Animation.",
     detailsText: "A collection of smaller animation exercises created to explore movement, timing, effects, and storytelling across Adobe Animate CC and After Effects.",
     tools: ["2D Animation", "Motion Graphics", "Frame Animation", "Adobe Animate", "After Effects"],
-    primaryImage: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/1_Girl Boatflow.webm",
+    primaryImage: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/Thumbnail.webp",
     mediaType: "video",
     videoUrl: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/1_Girl Boatflow.webm",
     gallery: [
@@ -314,7 +314,7 @@ const projectsData = [
     description: "A curated series of digital artwork: Melody, Gurl, Fish, Deer, Blue Girl, Avakin Character, Mermaid, Anime Character, and Nishant Sketch.",
     detailsText: "A rich collection of digital artwork, character designs, and atmospheric illustrations created across Photoshop, Procreate, and Adobe Fresco focusing on color, texture, and concept development.",
     tools: ["Photoshop", "Procreate", "Adobe Fresco", "Character Design", "Digital Illustration"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Art_Design/Melody.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Art_Design/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Art_Design/Melody.webp", caption: "01. Melody — Fictional Character Concept in Photoshop" },
@@ -339,7 +339,7 @@ const projectsData = [
     description: "Custom logo design projects and design thinking sheets: Rich Snacksy, Spark, Splendid Rooms 4U, IHOP, and Sparkling Rhythm.",
     detailsText: "A collection of logo concepts exploring symbol mark development, typography balance, grid geometry, and brand positioning sheets.",
     tools: ["Logo Design", "Symbol Development", "Typography", "Design Thinking"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Logo_Design_By_me/8_Sparkling_Logo.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Logo_Design_By_me/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Logo_Design_By_me/1_Rich_Snacsy.webp", caption: "01. Rich Snacksy Snack Shop Logo Concept" },
@@ -363,7 +363,7 @@ const projectsData = [
     description: "Poster designs including Spiritual Empowerment, World No Tobacco Day awareness posters, Spooky Night, and Burger promotional posters.",
     detailsText: "Visual communication and poster designs focusing on typography hierarchy, composition, and strong social message delivery.",
     tools: ["Poster Design", "Awareness Campaign", "Typography", "Visual Communication"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Posters/6_Tobacco_A_lethal_weapon.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Posters/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Posters/6_Tobacco_A_lethal_weapon.webp", caption: "01. Tobacco: A Lethal Weapon Awareness Poster" },
@@ -390,7 +390,7 @@ const projectsData = [
     description: "A promotional brochure created for Prabhu Ratna Contest (PRC), presenting event details in a clear and organized multi-panel format in Photoshop.",
     detailsText: "A promotional brochure created for Prabhu Ratna Contest (PRC). The design was developed in Photoshop with an emphasis on presenting event information in a visually engaging and organized format.",
     tools: ["Adobe Photoshop", "Brochure Design", "Layout", "Typography"],
-    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Brouchure/Brouchure.webp",
+    primaryImage: "images/Sparkling_Rhythm/3_Graphic_Design/Brouchure/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/3_Graphic_Design/Brouchure/Brouchure.webp", caption: "01. Full Tri-Fold Brochure Layout Design" }
@@ -428,7 +428,7 @@ const projectsData = [
     description: "A creative 3D environment project exploring modeling, forms, atmosphere and spooky visual storytelling in Blender.",
     detailsText: "A creative 3D environment project exploring modelling, forms, atmosphere and visual storytelling built in Blender, including perspective view and detail breakdowns.",
     tools: ["3D Modelling", "Blender", "Environment Design", "Visual Storytelling"],
-    primaryImage: "images/Sparkling_Rhythm/4_3d/Haunted_House/Haunted_House.webp",
+    primaryImage: "images/Sparkling_Rhythm/4_3d/Haunted_House/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/4_3d/Haunted_House/Haunted_House.webp", caption: "01. Haunted House Primary Render" },
@@ -446,7 +446,7 @@ const projectsData = [
     description: "A 3D creative project exploring modeling and form through the creation of a Ganpati Bappa model in Blender.",
     detailsText: "A 3D creative project exploring modeling and form through the creation of a Ganpati Bappa model in Blender, including front view, side view, and detail render collages.",
     tools: ["3D Modelling", "Blender", "Creative Modelling", "Form & Sculpture"],
-    primaryImage: "images/Sparkling_Rhythm/4_3d/Ganpati/Ganpati_Front.webp",
+    primaryImage: "images/Sparkling_Rhythm/4_3d/Ganpati/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/4_3d/Ganpati/Ganpati_Front.webp", caption: "01. Ganpati Bappa 3D Model Front View" },
@@ -465,7 +465,7 @@ const projectsData = [
     description: "A 3D modeling exercise created in Maya, focusing on form, proportions, modeling details, wireframes, and clean construction.",
     detailsText: "A 3D modeling exercise created in Maya, focusing on form, proportions, modeling details, and clean object construction. Includes design thinking sheets, wireframe polygon meshes, and closeups.",
     tools: ["3D Modelling", "Autodesk Maya", "Prop Modelling", "Wireframe Mesh"],
-    primaryImage: "images/Sparkling_Rhythm/4_3d/Guitar/Guitar.webp",
+    primaryImage: "images/Sparkling_Rhythm/4_3d/Guitar/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/4_3d/Guitar/Guitar.webp", caption: "01. Maya Guitar Model Main Render" },
@@ -486,7 +486,7 @@ const projectsData = [
     description: "A collection of 3D models: Magic Wands, Petrol Pump Environment, Stylized Red House, and Snow House created in Maya and Blender.",
     detailsText: "Explorations in 3D prop design and stylized environment modeling created in Maya and Blender, featuring design thinking sheets and multiple render angles.",
     tools: ["3D Modelling", "Maya", "Blender", "Environment Design", "Prop Design"],
-    primaryImage: "images/Sparkling_Rhythm/4_3d/Red_House/Red_House.webp",
+    primaryImage: "images/Sparkling_Rhythm/4_3d/Red_House/Thumbnail.webp",
     mediaType: "image",
     gallery: [
       { url: "images/Sparkling_Rhythm/4_3d/Red_House/Red_House.webp", caption: "01. Stylized Red House Render" },
