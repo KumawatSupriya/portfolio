@@ -207,11 +207,16 @@
               </div>
             </div>
 
-            <!-- Central Hub Node (Official IHOP Center Mark) -->
-            <div class="ecosystem-hub-node" onclick="openLightbox('ihop-rebranding', 0)" title="View Complete IHOP Brand Ecosystem">
-              <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/IHOP_Logo(middle image).webp" alt="IHOP Brand Ecosystem Center Mark" class="ecosystem-hub-logo-img">
-              <div class="ecosystem-hub-pill">Brand Ecosystem</div>
-              <div class="ecosystem-hub-tagline">Good Food Brighter Days</div>
+            <!-- Central Hub Node (Animated IHOP Logo & Center Mark) -->
+            <div class="ecosystem-hub-node" id="ecosystem-hub-node" onclick="openLightbox('ihop-rebranding', 0)" title="Click to view complete IHOP Brand Ecosystem case study">
+              <div class="ecosystem-hub-media-circle">
+                <video id="ihop-hub-video" class="ecosystem-hub-video" muted playsinline preload="auto" poster="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/IHOP_Logo(middle image).webp">
+                  <source src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/IHOP_Logo_Animation.webm" type="video/webm">
+                </video>
+              </div>
+              <div class="ecosystem-hub-badge">
+                <span class="ecosystem-hub-badge-text">Brand Ecosystem</span>
+              </div>
             </div>
 
             <!-- Card 5: Offline Experience (Warm Orange) -->
@@ -430,7 +435,91 @@
       renderProjectsGrid('all', '');
       initFilterControls();
       initSearchInput();
+      initHubVideoAutoplay();
     });
+
+    function initHubVideoAutoplay() {
+      const video = document.getElementById('ihop-hub-video');
+      const hubNode = document.getElementById('ecosystem-hub-node');
+      if (!video || !hubNode) return;
+
+      // Ensure video is muted for compliant inline autoplay
+      video.muted = true;
+
+      let initialDelayTimer = null;
+      let loopDelayTimer = null;
+      let isSectionInView = false;
+      let isPlaying = false;
+
+      function clearAllTimers() {
+        if (initialDelayTimer) {
+          clearTimeout(initialDelayTimer);
+          initialDelayTimer = null;
+        }
+        if (loopDelayTimer) {
+          clearTimeout(loopDelayTimer);
+          loopDelayTimer = null;
+        }
+      }
+
+      function playClipOnce() {
+        if (!isSectionInView) return;
+        clearAllTimers();
+        video.currentTime = 0;
+        isPlaying = true;
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(err => {
+            // Autoplay may be restricted until user interaction
+            isPlaying = false;
+          });
+        }
+      }
+
+      // When clip finishes playing, stop and wait another 3-second delay before playing again
+      video.addEventListener('ended', () => {
+        isPlaying = false;
+        clearAllTimers();
+        if (isSectionInView) {
+          loopDelayTimer = setTimeout(() => {
+            playClipOnce();
+          }, 3000);
+        }
+      });
+
+      // Track when the hub node scrolls into or out of view
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              isSectionInView = true;
+              clearAllTimers();
+              // After user scrolls to this section, wait 3-second delay, then play clip once
+              initialDelayTimer = setTimeout(() => {
+                playClipOnce();
+              }, 3000);
+            } else {
+              isSectionInView = false;
+              clearAllTimers();
+              if (isPlaying) {
+                video.pause();
+                isPlaying = false;
+              }
+            }
+          });
+        }, {
+          threshold: 0.35
+        });
+
+        observer.observe(hubNode);
+      } else {
+        // Fallback for older browsers
+        setTimeout(() => {
+          isSectionInView = true;
+          playClipOnce();
+        }, 3000);
+      }
+    }
 
     function renderProjectsGrid(activeCategory, searchQuery) {
       const grid = document.getElementById('projects-grid');
