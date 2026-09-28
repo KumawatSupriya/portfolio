@@ -49,6 +49,9 @@ function renderHeader() {
           <a href="projects.html" class="nav-link ${activePage === 'projects' ? 'active' : ''}">
             <i data-lucide="grid" class="icon-inline"></i> Portfolio
           </a>
+          <a href="pricing.html" class="nav-link ${activePage === 'pricing' ? 'active' : ''}">
+            <i data-lucide="tag" class="icon-inline"></i> Pricing
+          </a>
           <a href="contact.html" class="nav-link ${activePage === 'contact' ? 'active' : ''}">
             <i data-lucide="mail" class="icon-inline"></i> Contact
           </a>
@@ -82,6 +85,9 @@ function renderHeader() {
       <a href="projects.html" class="mobile-nav-link ${activePage === 'projects' ? 'active' : ''}">
         <i data-lucide="grid" class="icon-inline"></i> Portfolio
       </a>
+      <a href="pricing.html" class="mobile-nav-link ${activePage === 'pricing' ? 'active' : ''}">
+        <i data-lucide="tag" class="icon-inline"></i> Pricing
+      </a>
       <a href="contact.html" class="mobile-nav-link ${activePage === 'contact' ? 'active' : ''}">
         <i data-lucide="mail" class="icon-inline"></i> Contact
       </a>
@@ -110,6 +116,7 @@ function renderFooter() {
             <a href="index.html" class="nav-link"><i data-lucide="home" class="icon-inline"></i> Home</a>
             <a href="about.html" class="nav-link"><i data-lucide="user" class="icon-inline"></i> About</a>
             <a href="projects.html" class="nav-link"><i data-lucide="grid" class="icon-inline"></i> Portfolio</a>
+            <a href="pricing.html" class="nav-link"><i data-lucide="tag" class="icon-inline"></i> Pricing</a>
             <a href="contact.html" class="nav-link"><i data-lucide="mail" class="icon-inline"></i> Contact</a>
           </div>
 

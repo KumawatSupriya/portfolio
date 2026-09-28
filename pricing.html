@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Services & Pricing — Supriya Kumawat | Sparkling Rhythm</title>
+  <meta name="description"
+    content="Explore transparent pricing and packages for branding, logo design, social media kits, print collateral, UI/UX design, and 3D visual modeling by Supriya Kumawat.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="images/Sparkling_Rhythm/8_Sparkling_Logo.webp">
+
+  <!-- Lucide Icon Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="css/palette.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+  <!-- Reusable Header Component -->
+  <header id="site-header" data-page="pricing"></header>
+
+  <!-- ==========================================================================
+       PAGE HERO INTRODUCTION
+       ========================================================================== -->
+  <section class="hero-section pricing-hero" id="pricing-hero">
+    <canvas id="hero-canvas-1" class="hero-canvas-bg"></canvas>
+
+    <div class="container">
+      <div class="spatial-glass-card">
+        <div class="spatial-tilt-content">
+          <div class="badge">
+            <span class="status-dot"></span>
+            <span><i data-lucide="tag" class="icon-inline"></i> Transparent & Value-Driven Pricing</span>
+          </div>
+
+          <h1 class="hero-title">
+            Design Services <span class="gradient-text magnetic-title">& Pricing.</span>
+          </h1>
+
+          <p class="hero-description">
+            Explore clear, transparent package pricing tailored to your creative vision. Choose a complete,
+            multi-channel branding system or select focused individual design services across three defined tiers.
+            All rates are proposed starting prices in INR (₹).
+          </p>
+
+          <div class="pricing-hero-actions">
+            <a href="#individual-services" class="btn btn-primary">
+              <span>Explore Individual Services</span>
+              <i data-lucide="arrow-down" class="icon-inline"></i>
+            </a>
+            <a href="#branding-packages" class="btn btn-secondary">
+              <span>View Branding Packages</span>
+              <i data-lucide="sparkles" class="icon-inline"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 1: COMPLETE BRANDING PACKAGES
+       ========================================================================== -->
+  <section class="section-spacing" id="branding-packages">
+    <div class="container">
+      <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 1rem;">
+        <div class="badge" style="margin-bottom: 0.8rem;">
+          <i data-lucide="sparkles" class="icon-inline"></i> End-to-End Solutions
+        </div>
+        <h2 class="section-title">Complete Branding Packages</h2>
+        <p class="section-subtitle">
+          Designed for startups, growing companies, and established enterprises needing a cohesive visual identity,
+          strategic positioning, and complete brand asset libraries.
+        </p>
+      </div>
+
+      <!-- Populated dynamically from js/pricing-data.js -->
+      <div class="branding-packages-grid" id="branding-packages-grid"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: INDIVIDUAL DESIGN SERVICES (THREE TIERS)
+       ========================================================================== -->
+  <section class="section-spacing" id="individual-services" style="background: var(--bg-elevated); padding: 5rem 0;">
+    <div class="container">
+      <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 1.5rem;">
+        <div class="badge" style="margin-bottom: 0.8rem;">
+          <i data-lucide="layers" class="icon-inline"></i> Standalone Service Tiers
+        </div>
+        <h2 class="section-title">Individual Design Services</h2>
+        <p class="section-subtitle">
+          Select a creative discipline below to compare its Basic, Standard, and Premium packages. Each tier includes
+          fixed deliverable counts, clear revision limits, and export formats.
+        </p>
+      </div>
+
+      <!-- Category Selector Tabs -->
+      <div class="pricing-tabs-wrapper">
+        <div class="pricing-category-tabs" id="pricing-category-tabs" role="tablist" aria-label="Design Services Category Selector">
+          <!-- Populated dynamically via pricing.js -->
+        </div>
+      </div>
+
+      <!-- Active Service Header Info -->
+      <div id="active-service-header"></div>
+
+      <!-- 3-Tier Grid for Selected Service -->
+      <div class="pricing-tiers-grid" id="pricing-tiers-grid">
+        <!-- Populated dynamically via pricing.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: STANDALONE REFERENCE RATES & PROJECT RULES
+       ========================================================================== -->
+  <section class="section-spacing" id="reference-rates">
+    <div class="container">
+      <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+        <div class="badge" style="margin-bottom: 0.8rem;">
+          <i data-lucide="file-text" class="icon-inline"></i> Reference Guide & Add-Ons
+        </div>
+        <h2 class="section-title">Standalone Reference Rates & Terms</h2>
+        <p class="section-subtitle">
+          Useful starting rates for one-off line items outside defined tier packages, along with clear project rules,
+          revision parameters, and deliverables guidelines.
+        </p>
+      </div>
+
+      <!-- Reference Rates Grid -->
+      <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; margin-bottom: 0.5rem; text-align: center;">
+        Indicative Line-Item Rates
+      </h3>
+      <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; max-width: 650px; margin: 0 auto 1.5rem;">
+        Note: Defined tier packages bundle these deliverables at significant savings. These reference rates apply to standalone or out-of-package requests.
+      </p>
+
+      <div class="reference-rates-container" id="reference-rates-container">
+        <!-- Populated dynamically via pricing.js -->
+      </div>
+
+      <!-- Project Rules & Policies -->
+      <div style="margin-top: 4rem;">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; margin-bottom: 0.5rem; text-align: center;">
+          Additional Charges & Scope Rules
+        </h3>
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; max-width: 650px; margin: 0 auto 1.5rem;">
+          Transparent guidelines ensuring predictable budgets, timelines, and smooth collaboration.
+        </p>
+
+        <div class="project-rules-container" id="project-rules-container">
+          <!-- Populated dynamically via pricing.js -->
+        </div>
+
+        <div class="glass-card" style="padding: 2rem; margin-top: 2rem; border-radius: var(--border-radius-md);">
+          <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i data-lucide="info" class="icon-inline" style="color:var(--clr-coral-red);"></i> General Project Terms
+          </h4>
+          <ul class="general-terms-list" id="general-terms-container">
+            <!-- Populated dynamically via pricing.js -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: CUSTOM PROJECT ENQUIRY CALLOUT
+       ========================================================================== -->
+  <section class="section-spacing" id="custom-project" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="glass-card custom-project-card reveal">
+        <div class="card-icon-box" style="margin: 0 auto 1.2rem; background: rgba(240, 83, 101, 0.12); color: var(--clr-coral-red);">
+          <i data-lucide="help-circle"></i>
+        </div>
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 0.8rem;">
+          Unsure Which Package Fits Your Scope?
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 620px; margin: 0 auto 2rem; line-height: 1.6;">
+          Have unique requirements, a multi-phase product roadmap, or need a customized design retainer?
+          Let’s discuss your vision and formulate a custom quote tailored to your exact timeline and goals.
+        </p>
+        <button class="btn btn-primary" onclick="handlePackageEnquiry('Custom Project', 'Bespoke Creative Scope', 'Custom Quote')">
+          <span>Discuss a Custom Project</span>
+          <i data-lucide="arrow-up-right" class="icon-inline"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ENQUIRY FALLBACK MODAL (WHEN DEFAULT EMAIL CLIENT IS UNAVAILABLE)
+       ========================================================================== -->
+  <div class="enquiry-modal" id="enquiry-fallback-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="enquiry-modal-dialog">
+      <button class="modal-close-btn" onclick="closeEnquiryModal()" aria-label="Close dialog">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+
+      <h3 class="modal-title">Your Project Enquiry</h3>
+      <p class="modal-desc">
+        We’ve prepared your prefilled enquiry details. If your email app didn’t launch automatically, simply copy the message below and send it to our inbox.
+      </p>
+
+      <div class="modal-field-group">
+        <span class="modal-field-label">Recipient Email:</span>
+        <div class="modal-field-val" id="modal-enquiry-recipient">sparklingrhythm74@gmail.com</div>
+      </div>
+
+      <div class="modal-field-group">
+        <span class="modal-field-label">Email Subject:</span>
+        <div class="modal-field-val" id="modal-enquiry-subject">Enquiry about Design Services</div>
+      </div>
+
+      <div class="modal-field-group">
+        <span class="modal-field-label">Message Draft:</span>
+        <textarea class="modal-textarea" id="modal-enquiry-body" readonly></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary" onclick="copyModalEnquiryText()">
+          <i data-lucide="copy" class="icon-inline"></i>
+          <span>Copy Enquiry Text</span>
+        </button>
+        <a id="modal-direct-mailto-btn" href="mailto:sparklingrhythm74@gmail.com" class="btn btn-secondary">
+          <i data-lucide="mail" class="icon-inline"></i>
+          <span>Launch Email Client</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reusable Footer Component -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="js/pricing-data.js"></script>
+  <script src="js/pricing.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

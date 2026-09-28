@@ -2250,4 +2250,719 @@
   }
 }
 
+/* ==========================================================================
+   14. PRICING PAGE STYLING & INTERACTIVE COMPONENTS
+   ========================================================================== */
+
+/* Hero Quick Navigation Actions */
+.pricing-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   BRANDING PACKAGES SHOWCASE
+   -------------------------------------------------------------------------- */
+.branding-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.branding-card {
+  padding: 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.branding-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12), var(--glass-glow-pink);
+  border-color: var(--glass-border-hover);
+}
+
+.branding-meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--border-radius-full);
+  background: rgba(240, 83, 101, 0.1);
+  border: 1px solid rgba(240, 83, 101, 0.25);
+  color: var(--clr-coral-red);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.branding-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.branding-card-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--clr-coral-red);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .branding-card-price {
+  color: var(--clr-teal-cyan);
+}
+
+.branding-card-suitability {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  background: rgba(15, 23, 42, 0.04);
+  padding: 0.65rem 0.95rem;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 1.2rem;
+  line-height: 1.45;
+  border-left: 3px solid var(--clr-coral-red);
+}
+
+[data-theme="dark"] .branding-card-suitability {
+  background: rgba(255, 255, 255, 0.04);
+  border-left-color: var(--clr-teal-cyan);
+}
+
+.branding-card-summary {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.branding-inclusions-wrap {
+  margin: 1.2rem 0;
+  flex-grow: 1;
+}
+
+.inclusions-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+
+.pricing-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.pricing-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.pricing-feature-list .check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(240, 83, 101, 0.12);
+  color: var(--clr-coral-red);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+[data-theme="dark"] .pricing-feature-list .check-icon {
+  background: rgba(72, 202, 228, 0.15);
+  color: var(--clr-teal-cyan);
+}
+
+.pricing-card-footer {
+  margin-top: 1.8rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.pricing-card-meta-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.meta-label {
+  font-weight: 600;
+  color: var(--text-subtle);
+}
+
+.meta-val {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* --------------------------------------------------------------------------
+   INDIVIDUAL SERVICES & CATEGORY TABS
+   -------------------------------------------------------------------------- */
+.pricing-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2.2rem 0 2rem;
+  width: 100%;
+}
+
+.pricing-category-tabs {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 0.45rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-full);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.pricing-category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.pricing-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--border-radius-full);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.pricing-tab-btn:hover:not(.active) {
+  background: var(--glass-bg-hover);
+  color: var(--text-main);
+}
+
+.pricing-tab-btn.active {
+  background: var(--grad-coral-gold);
+  color: var(--text-inverse);
+  box-shadow: var(--glass-glow-pink);
+}
+
+/* Active Service Info Banner */
+.active-service-info {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.active-service-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.active-service-desc {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   3-TIER PRICING CARDS (ACTIVE SERVICE)
+   -------------------------------------------------------------------------- */
+.pricing-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-top: 1rem;
+}
+
+.pricing-card {
+  padding: 2.2rem 1.8rem;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1), var(--glass-glow-cyan);
+}
+
+.pricing-tier-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--border-radius-full);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.badge-basic {
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--clr-teal-cyan);
+  border: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+.badge-standard {
+  background: rgba(217, 119, 6, 0.1);
+  color: var(--clr-amber-gold);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.badge-premium {
+  background: rgba(240, 83, 101, 0.12);
+  color: var(--clr-coral-red);
+  border: 1px solid rgba(240, 83, 101, 0.3);
+}
+
+.pricing-package-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-price-tag {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.tier-premium .pricing-price-tag {
+  color: var(--clr-coral-red);
+}
+
+[data-theme="dark"] .tier-premium .pricing-price-tag {
+  color: var(--clr-teal-cyan);
+}
+
+.pricing-package-summary {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  min-height: 44px;
+  margin-bottom: 1.2rem;
+}
+
+.pricing-card-features {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+/* Expandable Details Accordion */
+.pricing-expandable-section {
+  margin: 0.8rem 0 1.2rem;
+  border-top: 1px dashed var(--glass-border);
+  padding-top: 0.8rem;
+}
+
+.pricing-expand-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.85rem;
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-muted);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+[data-theme="dark"] .pricing-expand-toggle {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pricing-expand-toggle:hover {
+  background: var(--glass-bg-hover);
+  color: var(--text-main);
+  border-color: var(--clr-teal-cyan);
+}
+
+.expand-chevron {
+  transition: transform 0.3s ease;
+}
+
+.pricing-expand-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.pricing-expand-content.open {
+  max-height: 380px;
+  opacity: 1;
+  padding: 0.9rem 0.4rem 0.4rem;
+}
+
+.expand-detail-group {
+  margin-bottom: 0.65rem;
+}
+
+.expand-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-subtle);
+  margin-bottom: 0.15rem;
+}
+
+.expand-val {
+  font-size: 0.86rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.pricing-card-action {
+  margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   REFERENCE RATES & PROJECT RULES ACCORDIONS
+   -------------------------------------------------------------------------- */
+.reference-rates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.reference-category-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.6rem 1.4rem;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.reference-cat-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reference-items-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.reference-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--glass-border);
+  font-size: 0.88rem;
+}
+
+.reference-item-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ref-item-name {
+  color: var(--text-muted);
+}
+
+.ref-item-price {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.project-rules-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.rule-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem 1.2rem;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.rule-item-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.rule-item-spec {
+  font-size: 0.88rem;
+  color: var(--clr-coral-red);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .rule-item-spec {
+  color: var(--clr-amber-gold);
+}
+
+.general-terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.8rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.term-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   CUSTOM PROJECT SECTION
+   -------------------------------------------------------------------------- */
+.custom-project-card {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--glass-border-hover);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05), var(--glass-glow-pink);
+}
+
+/* --------------------------------------------------------------------------
+   ACCESSIBLE ENQUIRY FALLBACK MODAL
+   -------------------------------------------------------------------------- */
+.enquiry-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 18, 30, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 1.5rem;
+}
+
+.enquiry-modal.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.enquiry-modal-dialog {
+  background: var(--bg-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-lg);
+  padding: 2.2rem;
+  width: 100%;
+  max-width: 580px;
+  box-shadow: var(--glass-shadow), 0 0 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.enquiry-modal.show .enquiry-modal-dialog {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  color: var(--clr-coral-red);
+  background: rgba(240, 83, 101, 0.1);
+}
+
+.modal-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.modal-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.modal-field-group {
+  margin-bottom: 1rem;
+}
+
+.modal-field-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-subtle);
+  margin-bottom: 0.3rem;
+}
+
+.modal-field-val {
+  padding: 0.65rem 0.85rem;
+  background: var(--bg-deep);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+  color: var(--text-main);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.modal-textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 0.8rem;
+  background: var(--bg-deep);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', monospace, sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE LAYOUT ADJUSTMENTS FOR PRICING
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .branding-packages-grid,
+  .pricing-tiers-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-category-tabs {
+    justify-content: flex-start;
+    padding: 0.35rem;
+    border-radius: var(--border-radius-md);
+    scroll-snap-type: x mandatory;
+  }
+  .pricing-tab-btn {
+    scroll-snap-align: start;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.88rem;
+  }
+  .branding-card,
+  .pricing-card {
+    padding: 1.8rem 1.4rem;
+  }
+  .custom-project-card {
+    padding: 2.2rem 1.4rem;
+  }
+}
+
+
 
