@@ -54,43 +54,306 @@
   </section>
 
   <!-- ==========================================================================
-       FEATURED REBRANDING SPOTLIGHT: IHOP CONCEPTUAL REDESIGN
+       FEATURED PROJECT: IHOP REBRAND BRAND ECOSYSTEM MINDMAP
        ========================================================================== -->
-  <section class="section-spacing" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+  <section class="brand-ecosystem-section" id="featured-ihop-rebrand">
     <div class="container">
-      <div class="glass-card book-exp-card reveal" style="border-color: var(--clr-coral-red);">
-        <div class="timeline-header">
-          <span class="badge" style="background: rgba(240, 83, 101, 0.15); color: var(--clr-coral-red);">
-            <i data-lucide="sparkles" class="icon-inline"></i> Featured Personal Rebranding Spotlight
-          </span>
-          <span class="timeline-year"><i data-lucide="award" class="icon-inline"></i> Personal Project</span>
+      
+      <!-- Section Header -->
+      <div class="ecosystem-header reveal">
+        <div class="ecosystem-tag-pill">
+          <i data-lucide="sparkles" class="icon-inline"></i> Featured Project
         </div>
+        <h2 class="ecosystem-main-title">IHOP Rebrand</h2>
+        <p class="ecosystem-main-desc">
+          A complete brand ecosystem designed to bring more joy to the table.
+        </p>
+        <button class="ecosystem-explore-chip" onclick="openLightbox('ihop-rebranding', 0)">
+          <span>Explore the full project</span>
+          <i data-lucide="arrow-down" class="icon-inline"></i>
+        </button>
 
-        <div class="grid-2" style="align-items: center; margin-top: 1.5rem; gap: 2.5rem;">
-          <div>
-            <h2 style="font-size: 1.8rem; margin-bottom: 0.8rem;">IHOP — Conceptual Logo Redesign</h2>
-            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
-              A complete conceptual logo redesign exploring a fresh visual direction rather than modifying the original identity. Features a custom pictorial symbol, typography system, ideation mindmaps, and real-world mockups.
-            </p>
-
-            <div class="tag-group" style="margin-bottom: 2rem;">
-              <span class="tag-chip">01. Ideation Sketches</span>
-              <span class="tag-chip">02. Pictorial Symbol Mark</span>
-              <span class="tag-chip">03. Custom Typography</span>
-              <span class="tag-chip">04. Storefront & Apparel Mockups</span>
-            </div>
-
-            <button class="btn btn-primary" onclick="openLightbox('ihop-rebranding')">
-              <span>View IHOP Case Study</span>
-              <i data-lucide="arrow-right" class="icon-inline"></i>
-            </button>
-          </div>
-
-          <div style="border-radius: var(--border-radius-md); overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); cursor: pointer;" onclick="openLightbox('ihop-rebranding')">
-            <img src="images/Sparkling_Rhythm/1_Branding/1_IHOP_Images/Thumbnail_Mockup_IHOP.webp" alt="IHOP Rebranding Concept" style="width:100%; height: auto; object-fit: cover;">
-          </div>
+        <div class="ecosystem-handwritten-badge">
+          <span>Click any section to explore</span>
+          <i data-lucide="corner-right-down" class="icon-inline" style="transform: rotate(-10deg);"></i>
         </div>
       </div>
+
+      <!-- Mindmap Grid Layout -->
+      <div class="ecosystem-mindmap-wrap reveal">
+        <div class="ecosystem-grid-layout">
+          
+          <!-- Column 1: Left Branch Cards -->
+          <div class="ecosystem-col">
+            
+            <!-- Card 1: Identity (Blue) -->
+            <div class="ecosystem-card cat-identity" onclick="openEcosystemSection('identity')" title="Explore Identity System">
+              <div class="ecosystem-card-header">
+                <div class="ecosystem-card-left">
+                  <div class="ecosystem-card-icon">
+                    <i data-lucide="pen-tool"></i>
+                  </div>
+                  <div class="ecosystem-card-title-group">
+                    <div class="ecosystem-card-name">Identity</div>
+                    <div class="ecosystem-card-sub">Logo, colors, typography and visual system.</div>
+                  </div>
+                </div>
+                <div class="ecosystem-card-action">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </div>
+              <div class="ecosystem-preview-strip">
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/7_Final_Logo with words on the side.webp" alt="IHOP Final Logo" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/8_Colour_Palette.webp" alt="IHOP Colour Palette" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/5_Typography.webp" alt="IHOP Typography" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Collaterals (Mint Green) -->
+            <div class="ecosystem-card cat-collaterals" onclick="openEcosystemSection('collaterals')" title="Explore Brand Collaterals">
+              <div class="ecosystem-card-header">
+                <div class="ecosystem-card-left">
+                  <div class="ecosystem-card-icon">
+                    <i data-lucide="shirt"></i>
+                  </div>
+                  <div class="ecosystem-card-title-group">
+                    <div class="ecosystem-card-name">Collaterals</div>
+                    <div class="ecosystem-card-sub">Menus, packaging, uniforms and more.</div>
+                  </div>
+                </div>
+                <div class="ecosystem-card-action">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </div>
+              <div class="ecosystem-preview-strip">
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/11_Menu_Design.webp" alt="IHOP Menu Design" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/14_Packaging.webp" alt="IHOP Packaging" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/13__Employee_Uniform.webp" alt="IHOP Uniforms" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Concept & Ideation (Coral Red) -->
+            <div class="ecosystem-card cat-concept" onclick="openEcosystemSection('concept')" title="Explore Ideation & Concepts">
+              <div class="ecosystem-card-header">
+                <div class="ecosystem-card-left">
+                  <div class="ecosystem-card-icon">
+                    <i data-lucide="lightbulb"></i>
+                  </div>
+                  <div class="ecosystem-card-title-group">
+                    <div class="ecosystem-card-name">Concept & Ideation</div>
+                    <div class="ecosystem-card-sub">Vector geometry, logo ideas and sketches.</div>
+                  </div>
+                </div>
+                <div class="ecosystem-card-action">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </div>
+              <div class="ecosystem-preview-strip">
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/6_Logo_Concept.webp" alt="IHOP Logo Concept" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/10_Logo_Animation_Storyboard.webp" alt="IHOP Storyboard Sketches" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/16_Moodboard.webp" alt="IHOP Moodboard" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Center Branch (Strategy, Center Hub, Offline Experience) -->
+          <div class="ecosystem-col-center">
+            
+            <!-- Card 4: Strategy (Rose Pink) -->
+            <div class="ecosystem-card cat-strategy" style="width: 100%;" onclick="openEcosystemSection('strategy')" title="Explore Strategy">
+              <div class="ecosystem-card-header">
+                <div class="ecosystem-card-left">
+                  <div class="ecosystem-card-icon">
+                    <i data-lucide="target"></i>
+                  </div>
+                  <div class="ecosystem-card-title-group">
+                    <div class="ecosystem-card-name">Strategy</div>
+                    <div class="ecosystem-card-sub">The foundation behind the rebrand.</div>
+                  </div>
+                </div>
+                <div class="ecosystem-card-action">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </div>
+              <div class="ecosystem-preview-strip">
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/1_Brand_Research.webp" alt="Brand Research" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/2_Brand_Strategy.webp" alt="Brand Strategy" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/3_Target_Audience.webp" alt="Target Audience" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Central Hub Node (Official IHOP Center Mark) -->
+            <div class="ecosystem-hub-node" onclick="openLightbox('ihop-rebranding', 0)" title="View Complete IHOP Brand Ecosystem">
+              <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/IHOP_Logo(middle image).webp" alt="IHOP Brand Ecosystem Center Mark" class="ecosystem-hub-logo-img">
+              <div class="ecosystem-hub-pill">Brand Ecosystem</div>
+              <div class="ecosystem-hub-tagline">Good Food Brighter Days</div>
+            </div>
+
+            <!-- Card 5: Offline Experience (Warm Orange) -->
+            <div class="ecosystem-card cat-offline" style="width: 100%;" onclick="openEcosystemSection('offline')" title="Explore Offline Experience">
+              <div class="ecosystem-card-header">
+                <div class="ecosystem-card-left">
+                  <div class="ecosystem-card-icon">
+                    <i data-lucide="store"></i>
+                  </div>
+                  <div class="ecosystem-card-title-group">
+                    <div class="ecosystem-card-name">Offline Experience</div>
+                    <div class="ecosystem-card-sub">In-store design, signage and environment.</div>
+                  </div>
+                </div>
+                <div class="ecosystem-card-action">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </div>
+              <div class="ecosystem-preview-strip two-cols">
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/15_Restaurant_Environment.webp" alt="IHOP Restaurant Environment" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/11_Menu_Design.webp" alt="IHOP In-Store Table Menu" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 3: Right Branch Cards -->
+          <div class="ecosystem-col">
+            
+            <!-- Card 6: Story & Mascot (Amber Gold) -->
+            <div class="ecosystem-card cat-story" onclick="openEcosystemSection('story')" title="Explore Story & Character">
+              <div class="ecosystem-card-header">
+                <div class="ecosystem-card-left">
+                  <div class="ecosystem-card-icon">
+                    <i data-lucide="book-open"></i>
+                  </div>
+                  <div class="ecosystem-card-title-group">
+                    <div class="ecosystem-card-name">Story & Mascot</div>
+                    <div class="ecosystem-card-sub">Brand story, character mascot and values.</div>
+                  </div>
+                </div>
+                <div class="ecosystem-card-action">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </div>
+              <div class="ecosystem-preview-strip">
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/9_Character(illustration).webp" alt="IHOP Character Mascot" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/10_Logo_Animation_Storyboard.webp" alt="IHOP Motion Storyboard" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/16_Moodboard.webp" alt="IHOP Creative Moodboard" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7: Marketing & Campaigns (Violet Purple) -->
+            <div class="ecosystem-card cat-marketing" onclick="openEcosystemSection('marketing')" title="Explore Marketing & Campaigns">
+              <div class="ecosystem-card-header">
+                <div class="ecosystem-card-left">
+                  <div class="ecosystem-card-icon">
+                    <i data-lucide="megaphone"></i>
+                  </div>
+                  <div class="ecosystem-card-title-group">
+                    <div class="ecosystem-card-name">Marketing</div>
+                    <div class="ecosystem-card-sub">Campaigns, promotions and creatives.</div>
+                  </div>
+                </div>
+                <div class="ecosystem-card-action">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </div>
+              <div class="ecosystem-preview-strip">
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/12_Social_Media.webp" alt="IHOP Campaign Creatives" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/15_Restaurant_Environment.webp" alt="IHOP Outdoor Billboard" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/4_Competitor.webp" alt="IHOP Market Positioning" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8: Social Media (Indigo Blue) -->
+            <div class="ecosystem-card cat-social" onclick="openEcosystemSection('social')" title="Explore Social Media">
+              <div class="ecosystem-card-header">
+                <div class="ecosystem-card-left">
+                  <div class="ecosystem-card-icon">
+                    <i data-lucide="users"></i>
+                  </div>
+                  <div class="ecosystem-card-title-group">
+                    <div class="ecosystem-card-name">Social Media</div>
+                    <div class="ecosystem-card-sub">Content, community and digital engagement.</div>
+                  </div>
+                </div>
+                <div class="ecosystem-card-action">
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </div>
+              <div class="ecosystem-preview-strip">
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/12_Social_Media.webp" alt="IHOP Social Media 1" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/9_Character(illustration).webp" alt="IHOP Mascot Social Post" loading="lazy">
+                </div>
+                <div class="ecosystem-thumb-box">
+                  <img src="images/Sparkling_Rhythm/1_Branding/IHOP_Branding/IHOP_Branding/14_Packaging.webp" alt="IHOP Packaging Social Post" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Feature Footer Bar -->
+      <div class="ecosystem-footer-bar reveal">
+        <div class="ecosystem-footer-left">
+          <div class="ecosystem-footer-icon-circle">
+            <i data-lucide="lightbulb"></i>
+          </div>
+          <div>
+            <div class="ecosystem-footer-title">A complete brand. A stronger experience.</div>
+            <div class="ecosystem-footer-subtitle">From strategy to the final detail — exploring how design can make everyday moments better.</div>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="openLightbox('ihop-rebranding', 0)">
+          <span>View Full Case Study</span>
+          <i data-lucide="arrow-right" class="icon-inline"></i>
+        </button>
+      </div>
+
     </div>
   </section>
 
