@@ -296,7 +296,7 @@ const projectsData = [
     categoryLabel: "Animation Experiments",
     isFeatured: false,
     isPersonalProject: false,
-    description: "Exercises exploring movement: Girl Blowing a Boat, Butterfly Animation, Fish Swimming, Hard Work, and Train Path Animation.",
+    description: "Exercises exploring movement: Girl Blowing a Boat, Butterfly Animation, Fish Swimming, and Train Path Animation.",
     detailsText: "A collection of smaller animation exercises created to explore movement, timing, effects, and storytelling across Adobe Animate CC and After Effects.",
     tools: ["2D Animation", "Motion Graphics", "Frame Animation", "Adobe Animate", "After Effects"],
     primaryImage: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/Thumbnail.webp",
@@ -306,8 +306,7 @@ const projectsData = [
       { url: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/1_Girl Boatflow.webm", caption: "01. Girl Blowing a Boat — Adobe Animate" },
       { url: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/2_butterfly.webm", caption: "02. Butterfly Motion Animation — After Effects" },
       { url: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/3_Fish animation .webm", caption: "03. Fish Swimming Motion Study — Adobe Animate" },
-      { url: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/4_hard work.webm", caption: "04. Hard Work Animation Study" },
-      { url: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/5_Train Path.webm", caption: "05. Train Path Motion Animation — Adobe Animate" }
+      { url: "images/Sparkling_Rhythm/2_Animation/4_Simple_Animation/5_Train Path.webm", caption: "04. Train Path Motion Animation — Adobe Animate" }
     ]
   },
 
