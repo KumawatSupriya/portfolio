@@ -1352,6 +1352,9 @@
   .spatial-glass-card {
     padding: 2.5rem 1.2rem;
   }
+  .portfolio-cta-card {
+    padding: 2.5rem 1.2rem !important;
+  }
   .book-exp-card {
     padding: 1.5rem 1.2rem !important;
     margin-top: 1.5rem !important;
@@ -1373,12 +1376,63 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+  .project-card-body {
+    padding: 1.4rem 1.2rem;
+  }
+  .project-card-title {
+    font-size: 1.2rem;
+  }
+  .project-card-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .search-input-wrapper {
+    margin-bottom: 1.5rem;
+  }
+  .search-input {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem 0.8rem 2.8rem;
+  }
+  .search-icon {
+    left: 1rem;
+    width: 18px;
+    height: 18px;
+  }
+  .filter-controls-strip {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.4rem 0.5rem 0.85rem;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+    scrollbar-width: none;
+  }
+  .filter-controls-strip::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    flex-shrink: 0;
+    font-size: 0.86rem;
+    padding: 0.55rem 1.15rem;
+  }
   .footer-content {
     flex-direction: column;
     text-align: center;
   }
+  .lightbox-modal {
+    padding: 1rem 0.6rem;
+  }
   .lightbox-container {
-    padding: 1.5rem 1rem;
+    padding: 1.4rem 1rem;
+    max-height: 92vh;
+  }
+  .lightbox-close-btn {
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
   }
   .tag-chip {
     white-space: normal;
@@ -1386,10 +1440,6 @@
     padding: 0.35rem 0.85rem;
     max-width: 100%;
     text-align: center;
-  }
-  .filter-btn {
-    font-size: 0.88rem;
-    padding: 0.55rem 1.2rem;
   }
   .section-spacing {
     padding: 3.5rem 0;
@@ -1410,6 +1460,23 @@
   }
   .hero-description {
     font-size: 0.98rem;
+  }
+  .tag-group {
+    gap: 0.5rem;
+  }
+  .badge {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  .project-card-body {
+    padding: 1.15rem 0.9rem;
+  }
+  .lightbox-modal {
+    padding: 0.5rem;
+  }
+  .lightbox-container {
+    padding: 1.1rem 0.8rem;
+    border-radius: var(--border-radius-md);
   }
   .fullscreen-close-btn {
     top: 1rem;
@@ -1644,7 +1711,7 @@
    ========================================================================== */
 .brand-ecosystem-section {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   padding: 2.5rem 0 3.5rem;
 }
 
@@ -1735,7 +1802,7 @@
 .ecosystem-handwritten-badge {
   position: absolute;
   top: 10px;
-  right: -20px;
+  right: 0;
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -1765,11 +1832,12 @@
 
 .ecosystem-grid-layout {
   display: grid;
-  grid-template-columns: minmax(290px, 1fr) minmax(320px, 1.1fr) minmax(290px, 1fr);
-  gap: 1.8rem 1.5rem;
+  grid-template-columns: minmax(260px, 1fr) minmax(280px, 1.1fr) minmax(260px, 1fr);
+  gap: 1.5rem 1.25rem;
   align-items: center;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .ecosystem-col {
@@ -2183,28 +2251,9 @@
 /* --------------------------------------------------------------------------
    RESPONSIVE BREAKPOINTS FOR BRAND ECOSYSTEM
    -------------------------------------------------------------------------- */
-@media (max-width: 1080px) {
-  .ecosystem-grid-layout {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-  .ecosystem-col-center {
-    grid-column: span 2;
-    order: -1;
-    margin-bottom: 0.8rem;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-  }
-  .ecosystem-col-center .ecosystem-card {
-    flex: 1;
-    max-width: 380px;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .brand-ecosystem-section {
-    padding: 2rem 0;
+    overflow: hidden;
   }
   .ecosystem-header {
     margin-bottom: 2rem;
@@ -2212,30 +2261,118 @@
   .ecosystem-handwritten-badge {
     position: static;
     justify-content: center;
+    margin-top: 0.85rem;
+    transform: none;
+  }
+}
+
+/* Tablet (769px to 1100px) - Symmetrical 2-Column Mindmap with Central Hub Top */
+@media (max-width: 1100px) and (min-width: 769px) {
+  .ecosystem-grid-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .ecosystem-col-center {
+    grid-column: span 2;
+    order: -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: auto;
+  }
+  .ecosystem-hub-node {
+    grid-column: span 2;
+    order: -1;
+    margin: 0.5rem auto 1.2rem auto;
+    width: 220px;
+    height: 220px;
+  }
+  .ecosystem-col-center .ecosystem-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .ecosystem-footer-bar {
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem 1.8rem;
+  }
+}
+
+/* Mobile (<= 768px) - 1-Column Fluid Stack */
+@media (max-width: 768px) {
+  .brand-ecosystem-section {
+    padding: 2.2rem 0 2rem;
+    overflow: hidden;
+  }
+  .ecosystem-header {
+    margin-bottom: 1.8rem;
+  }
+  .ecosystem-main-title {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+  .ecosystem-main-desc {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+  .ecosystem-handwritten-badge {
+    position: static;
+    justify-content: center;
     margin-top: 0.8rem;
     transform: none;
+    font-size: 0.9rem;
   }
   .ecosystem-grid-layout {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  .ecosystem-col {
+    gap: 1.25rem;
+    width: 100%;
   }
   .ecosystem-col-center {
     grid-column: span 1;
+    order: -1;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.25rem;
+    width: 100%;
+    height: auto;
+  }
+  .ecosystem-hub-node {
+    order: -1;
+    width: 195px;
+    height: 195px;
+    margin: 0.5rem auto 0.75rem auto;
   }
   .ecosystem-col-center .ecosystem-card {
     max-width: 100%;
     width: 100%;
   }
-  .ecosystem-hub-node {
-    width: 200px;
-    height: 200px;
+  .ecosystem-card {
+    padding: 1.15rem 1.1rem;
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .ecosystem-card-name {
+    font-size: 1.05rem;
+  }
+  .ecosystem-card-sub {
+    font-size: 0.78rem;
+  }
+  .ecosystem-preview-strip {
+    gap: 0.4rem;
   }
   .ecosystem-footer-bar {
+    margin-top: 2.5rem;
     border-radius: var(--border-radius-lg);
-    padding: 1.5rem;
+    padding: 1.4rem 1.2rem;
     flex-direction: column;
     align-items: stretch;
     text-align: center;
@@ -2243,10 +2380,66 @@
   .ecosystem-footer-left {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  .ecosystem-footer-title {
+    font-size: 1.02rem;
+  }
+  .ecosystem-footer-subtitle {
+    font-size: 0.84rem;
   }
   .ecosystem-footer-bar .btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Small Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .ecosystem-hub-node {
+    width: 170px;
+    height: 170px;
+  }
+  .ecosystem-hub-node::before {
+    inset: -7px;
+  }
+  .ecosystem-hub-badge {
+    bottom: -9px;
+    padding: 0.18rem 0.65rem;
+  }
+  .ecosystem-hub-badge-text {
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+  }
+  .ecosystem-card {
+    padding: 1rem 0.85rem;
+  }
+  .ecosystem-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+  .ecosystem-card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .ecosystem-card-name {
+    font-size: 0.98rem;
+  }
+  .ecosystem-card-action {
+    width: 28px;
+    height: 28px;
+  }
+  .ecosystem-card-action svg {
+    width: 14px;
+    height: 14px;
+  }
+  .ecosystem-thumb-box {
+    border-radius: 6px;
+  }
+  .ecosystem-footer-bar {
+    padding: 1.2rem 1rem;
   }
 }
 
