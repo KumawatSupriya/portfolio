@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bg-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#141832"/>
+      <stop offset="100%" stop-color="#1a1c36"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <radialGradient id="glow-teal" cx="50%" cy="10%" r="50%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg-grad2)"/>
+  <circle cx="600" cy="100" r="400" fill="url(#glow-teal)"/>
+
+  <!-- Header -->
+  <g transform="translate(100, 70)">
+    <rect x="0" y="0" width="180" height="34" rx="17" fill="#00F0FF" fill-opacity="0.15" stroke="#00F0FF" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="20" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#00F0FF" letter-spacing="1">SCOPE OF WORK</text>
+
+    <text x="0" y="75" font-family="'Space Grotesk', sans-serif" font-size="34" font-weight="700" fill="#FFFFFF">
+      Key Creative Deliverables &amp; Asset Types
+    </text>
+    <text x="0" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" fill="#94A3B8">
+      Overview of multi-channel visual content created for RiseRift Media client marketing initiatives.
+    </text>
+  </g>
+
+  <!-- 4 Deliverable Cards Grid -->
+  <!-- Card 1: Social Media -->
+  <g transform="translate(100, 210)">
+    <rect width="480" height="230" rx="20" fill="url(#card-grad)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2"/>
+    <rect x="30" y="30" width="48" height="48" rx="12" fill="#FF5D8F" fill-opacity="0.18"/>
+    <!-- Lucide share-2 / instagram style icon -->
+    <path d="M48 46 L60 40 M48 62 L60 68" stroke="#FF5D8F" stroke-width="2"/>
+    <circle cx="44" cy="54" r="5" fill="#FF5D8F"/>
+    <circle cx="64" cy="38" r="4" fill="#FF5D8F"/>
+    <circle cx="64" cy="70" r="4" fill="#FF5D8F"/>
+
+    <text x="95" y="55" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Social Media Creatives</text>
+    <text x="95" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#FF8FA3">Instagram &amp; Facebook Ecosystem</text>
+
+    <text x="30" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1" line-height="1.5">
+      • High-converting feed posts, carousel carousels, and stories
+    </text>
+    <text x="30" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Brand-consistent layout templates &amp; typography rules
+    </text>
+    <text x="30" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Visual content aligned with target audience engagement
+    </text>
+  </g>
+
+  <!-- Card 2: Motion & Video -->
+  <g transform="translate(620, 210)">
+    <rect width="480" height="230" rx="20" fill="url(#card-grad)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2"/>
+    <rect x="30" y="30" width="48" height="48" rx="12" fill="#7B2CBF" fill-opacity="0.25"/>
+    <path d="M48 45 L62 54 L48 63 Z" fill="#C77DFF"/>
+
+    <text x="95" y="55" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Motion Graphics &amp; Video Reels</text>
+    <text x="95" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#C77DFF">Short-Form Promotional Video</text>
+
+    <text x="30" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Dynamic animated title cards and kinetic typography
+    </text>
+    <text x="30" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Promotional reels designed for Instagram &amp; Facebook
+    </text>
+    <text x="30" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Fluid transition effects and 2D animated asset overlays
+    </text>
+  </g>
+
+  <!-- Card 3: Marketing Banners -->
+  <g transform="translate(100, 470)">
+    <rect width="480" height="230" rx="20" fill="url(#card-grad)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2"/>
+    <rect x="30" y="30" width="48" height="48" rx="12" fill="#00F0FF" fill-opacity="0.18"/>
+    <rect x="44" y="46" width="20" height="16" rx="3" fill="none" stroke="#00F0FF" stroke-width="2"/>
+    <line x1="44" y1="52" x2="64" y2="52" stroke="#00F0FF" stroke-width="1.5"/>
+
+    <text x="95" y="55" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Advertising &amp; Promo Banners</text>
+    <text x="95" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#00F0FF">Digital Campaigns &amp; Ads</text>
+
+    <text x="30" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Web display banners across standard aspect ratios
+    </text>
+    <text x="30" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Promotional event announcements and digital posters
+    </text>
+    <text x="30" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Click-optimized visual hierarchy and clear CTAs
+    </text>
+  </g>
+
+  <!-- Card 4: Editorial & Illustrations -->
+  <g transform="translate(620, 470)">
+    <rect width="480" height="230" rx="20" fill="url(#card-grad)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2"/>
+    <rect x="30" y="30" width="48" height="48" rx="12" fill="#FFB703" fill-opacity="0.18"/>
+    <path d="M46 62 L60 44 L66 50 L52 68 Z" fill="#FFB703"/>
+
+    <text x="95" y="55" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Print Collateral &amp; Artwork</text>
+    <text x="95" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#FFB703">Brochures &amp; Custom Artwork</text>
+
+    <text x="30" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Multi-page brochure layouts and visual documentation
+    </text>
+    <text x="30" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Custom digital illustrations and graphic storytelling
+    </text>
+    <text x="30" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="14.5" fill="#CBD5E1">
+      • Print-ready CMYK formatting and high-res digital exports
+    </text>
+  </g>
+
+  <!-- Confidentiality Footer -->
+  <text x="600" y="745" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#64748B">
+    Confidentiality Notice: Creative asset examples and design methodology can be viewed during interview discussions.
+  </text>
+</svg>

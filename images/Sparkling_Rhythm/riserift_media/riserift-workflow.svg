@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bg-grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#141832"/>
+      <stop offset="100%" stop-color="#18152e"/>
+    </linearGradient>
+    <linearGradient id="panel-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <radialGradient id="glow-purple" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#7B2CBF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7B2CBF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg-grad3)"/>
+  <circle cx="950" cy="200" r="450" fill="url(#glow-purple)"/>
+
+  <!-- Header -->
+  <g transform="translate(100, 70)">
+    <rect x="0" y="0" width="190" height="34" rx="17" fill="#7B2CBF" fill-opacity="0.25" stroke="#7B2CBF" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="20" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#E0AAFF" letter-spacing="1">CREATIVE TOOLKIT</text>
+
+    <text x="0" y="75" font-family="'Space Grotesk', sans-serif" font-size="34" font-weight="700" fill="#FFFFFF">
+      Software &amp; Production Pipeline
+    </text>
+    <text x="0" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" fill="#94A3B8">
+      Professional applications deployed to conceptualize, produce, and export client assets.
+    </text>
+  </g>
+
+  <!-- 3 Big Pipeline Pillars -->
+  <!-- Pillar 1: Vector & Layout -->
+  <g transform="translate(100, 210)">
+    <rect width="315" height="490" rx="20" fill="url(#panel-grad)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2"/>
+    <rect x="25" y="25" width="44" height="44" rx="10" fill="#FF5D8F" fill-opacity="0.2"/>
+    <circle cx="47" cy="47" r="10" fill="none" stroke="#FF5D8F" stroke-width="2.5"/>
+
+    <text x="80" y="47" font-family="'Space Grotesk', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">Vector &amp; Layout</text>
+    <text x="80" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#FF8FA3">Visual Composition</text>
+
+    <line x1="25" y1="88" x2="290" y2="88" stroke="#FFFFFF" stroke-opacity="0.1"/>
+
+    <!-- Tool Items -->
+    <g transform="translate(25, 110)">
+      <rect width="265" height="60" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Adobe Illustrator</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Vector branding &amp; marketing assets</text>
+    </g>
+
+    <g transform="translate(25, 185)">
+      <rect width="265" height="60" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Canva Pro</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Rapid social templates &amp; collateral</text>
+    </g>
+
+    <g transform="translate(25, 260)">
+      <rect width="265" height="60" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">CorelDRAW</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Vector curves &amp; technical artwork</text>
+    </g>
+
+    <g transform="translate(25, 335)">
+      <rect width="265" height="60" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Affinity Designer</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Precision vector illustration</text>
+    </g>
+
+    <g transform="translate(25, 410)">
+      <rect width="265" height="60" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Adobe InDesign</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Brochures &amp; multi-page publishing</text>
+    </g>
+  </g>
+
+  <!-- Pillar 2: Photo & Retouching -->
+  <g transform="translate(442, 210)">
+    <rect width="315" height="490" rx="20" fill="url(#panel-grad)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2"/>
+    <rect x="25" y="25" width="44" height="44" rx="10" fill="#00F0FF" fill-opacity="0.2"/>
+    <rect x="37" y="37" width="20" height="20" rx="4" fill="none" stroke="#00F0FF" stroke-width="2"/>
+
+    <text x="80" y="47" font-family="'Space Grotesk', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">Photo &amp; Art</text>
+    <text x="80" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#00F0FF">Imaging &amp; Illustration</text>
+
+    <line x1="25" y1="88" x2="290" y2="88" stroke="#FFFFFF" stroke-opacity="0.1"/>
+
+    <!-- Tool Items -->
+    <g transform="translate(25, 110)">
+      <rect width="265" height="75" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Adobe Photoshop</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Color grading, image masking, composite</text>
+      <text x="20" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">graphics, &amp; campaign touch-ups</text>
+    </g>
+
+    <g transform="translate(25, 200)">
+      <rect width="265" height="75" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Procreate</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Custom digital illustration, sketch ideation,</text>
+      <text x="20" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">&amp; hand-crafted artistic assets</text>
+    </g>
+
+    <!-- Role Highlight Box -->
+    <g transform="translate(25, 290)">
+      <rect width="265" height="180" rx="12" fill="#0A0F1D" fill-opacity="0.5" stroke="#00F0FF" stroke-opacity="0.2"/>
+      <text x="20" y="32" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#00F0FF">IMAGE FIDELITY</text>
+      <text x="20" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#CBD5E1" line-height="1.5">
+        Balancing visual polish with strict
+      </text>
+      <text x="20" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#CBD5E1">
+        compression standards for social feeds
+      </text>
+      <text x="20" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#CBD5E1">
+        and responsive digital banners to
+      </text>
+      <text x="20" y="118" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#CBD5E1">
+        maintain high contrast and clarity.
+      </text>
+    </g>
+  </g>
+
+  <!-- Pillar 3: Motion & Animation -->
+  <g transform="translate(785, 210)">
+    <rect width="315" height="490" rx="20" fill="url(#panel-grad)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2"/>
+    <rect x="25" y="25" width="44" height="44" rx="10" fill="#FFB703" fill-opacity="0.2"/>
+    <path d="M42 39 L54 47 L42 55 Z" fill="#FFB703"/>
+
+    <text x="80" y="47" font-family="'Space Grotesk', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">Motion &amp; Video</text>
+    <text x="80" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#FFB703">Dynamic Content</text>
+
+    <line x1="25" y1="88" x2="290" y2="88" stroke="#FFFFFF" stroke-opacity="0.1"/>
+
+    <!-- Tool Items -->
+    <g transform="translate(25, 110)">
+      <rect width="265" height="75" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Adobe After Effects</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Kinetic typography, animated promo reels,</text>
+      <text x="20" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">and commercial motion branding</text>
+    </g>
+
+    <g transform="translate(25, 200)">
+      <rect width="265" height="75" rx="10" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Procreate Dreams</text>
+      <text x="20" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">Keyframe animation, 2D organic motion,</text>
+      <text x="20" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94A3B8">&amp; hand-drawn motion accents</text>
+    </g>
+
+    <!-- Role Highlight Box -->
+    <g transform="translate(25, 290)">
+      <rect width="265" height="180" rx="12" fill="#0A0F1D" fill-opacity="0.5" stroke="#FFB703" stroke-opacity="0.2"/>
+      <text x="20" y="32" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#FFB703">MOTION ENGAGEMENT</text>
+      <text x="20" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#CBD5E1">
+        Crafting short, thumb-stopping
+      </text>
+      <text x="20" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#CBD5E1">
+        motion reels tailored for vertical
+      </text>
+      <text x="20" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#CBD5E1">
+        video consumption across social media
+      </text>
+      <text x="20" y="118" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#CBD5E1">
+        campaign channels.
+      </text>
+    </g>
+  </g>
+
+  <!-- Confidentiality Footer -->
+  <text x="600" y="745" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#64748B">
+    Confidentiality Notice: Creative asset examples and design methodology can be viewed during interview discussions.
+  </text>
+</svg>

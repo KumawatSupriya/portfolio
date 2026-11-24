@@ -335,11 +335,32 @@ function openLightbox(projectId, initialIndex = 0) {
       <i data-lucide="tag" class="icon-inline"></i> ${project.categoryLabel || project.category}
     </span>
     ${project.isPersonalProject ? `<span class="badge" style="background:rgba(255,183,3,0.15);color:var(--clr-amber-gold);"><i data-lucide="sparkles" class="icon-inline"></i> Personal Rebranding Case Study</span>` : ''}
+    ${project.isConfidential ? `<span class="badge" style="background:rgba(255,93,143,0.15);color:var(--clr-coral-red);border:1px solid rgba(255,93,143,0.3);"><i data-lucide="lock" class="icon-inline"></i> Confidential Work (NDA Protected)</span>` : ''}
   `;
 
   titleContainer.textContent = project.title;
   toolsContainer.innerHTML = project.tools.map(t => `<span class="tag-chip">${t}</span>`).join('');
-  descContainer.textContent = project.detailsText || project.description;
+    if (project.isConfidential) {
+    descContainer.innerHTML = `
+      <p style="margin-bottom:1.2rem;">${project.detailsText || project.description}</p>
+      <div class="glass-card" style="padding:1.4rem; border-left:3px solid var(--clr-coral-red); background:rgba(255,93,143,0.06); border-radius:12px;">
+        <div style="font-weight:700; color:var(--clr-coral-red); margin-bottom:0.4rem; display:flex; align-items:center; gap:0.5rem; font-size:0.95rem;">
+          <i data-lucide="shield-check" style="width:18px;height:18px;"></i> Client Non-Disclosure Agreement (NDA)
+        </div>
+        <div style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+          Proprietary campaign assets and direct client marketing files are withheld to honor confidentiality standards. Work methodology, asset production pipelines, and design case studies can be reviewed privately upon request.
+        </div>
+        <div style="margin-top:1rem;">
+          <a href="contact.html" class="btn btn-secondary" style="font-size:0.85rem; padding:0.55rem 1.2rem; display:inline-flex;">
+            <span>Inquire About Commercial Work</span>
+            <i data-lucide="arrow-right" class="icon-inline"></i>
+          </a>
+        </div>
+      </div>
+    `;
+  } else {
+    descContainer.textContent = project.detailsText || project.description;
+  }
 
   // Render Branding Process Breakdown
   if (project.processStages && project.processStages.length > 0) {

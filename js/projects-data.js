@@ -30,6 +30,31 @@ const projectsData = [
   // TOP FEATURED PROJECTS (Recommended Order 1-6)
   // --------------------------------------------------------------------------
   {
+    id: "riserift-media-assets",
+    title: "RiseRift Media — Digital Content & Campaign Assets",
+    category: "graphic-design",
+    categoryLabel: "Commercial Work",
+    isFeatured: true,
+    isPersonalProject: false,
+    isConfidential: true,
+    description: "Multi-channel digital marketing assets, high-engagement social media creatives, promotional motion reels, advertising banners, and custom illustrations under NDA.",
+    detailsText: "Working as an independent creative contributor at RiseRift Media, producing comprehensive digital assets across brand marketing initiatives. Deliverables encompass high-converting social media creatives (Instagram & Facebook), promotional web banners, advertising graphics, motion graphics & video reels, brochures, and digital illustrations. Note: In compliance with client non-disclosure agreements (NDAs), direct proprietary campaign creatives are protected; workflow breakdown, asset taxonomy, and role contributions are showcased above.",
+    tools: ["Social Media Creatives", "Motion Reels", "Promotional Banners", "Adobe Illustrator", "Photoshop", "After Effects", "Canva", "CorelDRAW", "Procreate Dreams", "InDesign"],
+    primaryImage: "images/Sparkling_Rhythm/riserift_media/riserift-thumb.svg",
+    mediaType: "image",
+    gallery: [
+      { url: "images/Sparkling_Rhythm/riserift_media/riserift-thumb.svg", caption: "01. RiseRift Media — Project Overview & Confidentiality Status" },
+      { url: "images/Sparkling_Rhythm/riserift_media/riserift-deliverables.svg", caption: "02. Scope of Creative Deliverables & Asset Types" },
+      { url: "images/Sparkling_Rhythm/riserift_media/riserift-workflow.svg", caption: "03. Software Stack & Production Pipeline" }
+    ],
+    processStages: [
+      { name: "01. Campaign Briefing", detail: "Translating client campaign goals, target audience demographics, and core value propositions into visual direction." },
+      { name: "02. Asset Production", detail: "Rapid-turnaround creation of feed posts, vertical reels, web banners, and marketing collateral." },
+      { name: "03. Motion & Animation", detail: "Producing engaging kinetic typography and motion accents in After Effects & Procreate Dreams." },
+      { name: "04. Multi-Format Delivery", detail: "Optimizing export profiles, color calibration, and aspect ratios for seamless deployment across channels." }
+    ]
+  },
+  {
     id: "atma-samvaad-ki-kala",
     title: "Atma Samvaad Ki Kala — Khushhaal Jeevan Ka Rahasya",
     category: "book-editorial",

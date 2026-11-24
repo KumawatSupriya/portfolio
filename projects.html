@@ -377,6 +377,7 @@
       <!-- Category Filter Tabs -->
       <div class="filter-controls-strip" id="filter-controls">
         <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="commercial">Commercial Work</button>
         <button class="filter-btn" data-filter="branding">Branding</button>
         <button class="filter-btn" data-filter="animation">Animation</button>
         <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
@@ -528,7 +529,7 @@
       const query = searchQuery.toLowerCase().trim();
 
       const filtered = projectsData.filter(p => {
-        const matchesCategory = activeCategory === 'all' || p.category === activeCategory;
+        const matchesCategory = activeCategory === 'all' || p.category === activeCategory || (activeCategory === 'commercial' && (p.isConfidential || (p.categoryLabel && p.categoryLabel.toLowerCase().includes('commercial'))));
         const matchesQuery = !query || 
           p.title.toLowerCase().includes(query) || 
           p.description.toLowerCase().includes(query) ||
@@ -560,15 +561,22 @@
             ${p.mediaType === 'video' ? `<div class="video-play-badge"><i data-lucide="play-circle" style="width:36px;height:36px;"></i></div>` : ''}
           </div>
           <div class="project-card-body">
-            <div class="project-category-badge">
-              <i data-lucide="tag" class="icon-inline"></i> ${p.categoryLabel}
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.6rem; flex-wrap:wrap;">
+              <div class="project-category-badge" style="margin-bottom:0;">
+                <i data-lucide="tag" class="icon-inline"></i> ${p.categoryLabel}
+              </div>
+              ${p.isConfidential ? `
+                <span class="badge" style="background:rgba(255,93,143,0.15); color:var(--clr-coral-red); font-size:0.75rem; padding:0.2rem 0.65rem; border:1px solid rgba(255,93,143,0.3);">
+                  <i data-lucide="lock" class="icon-inline" style="width:12px;height:12px;"></i> Under NDA
+                </span>
+              ` : ''}
             </div>
             <h3 class="project-card-title">${p.title}</h3>
             <p class="project-card-desc">${p.description}</p>
 
             <button class="btn btn-secondary" onclick="openLightbox('${p.id}')" style="width:100%; justify-content: space-between;">
-              <span>View Project</span>
-              <i data-lucide="arrow-right" class="icon-inline"></i>
+              <span>${p.isConfidential ? 'View NDA Overview' : 'View Project'}</span>
+              <i data-lucide="${p.isConfidential ? 'shield' : 'arrow-right'}" class="icon-inline"></i>
             </button>
           </div>
         </div>
