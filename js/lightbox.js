@@ -57,12 +57,24 @@ function initLightboxModal() {
   if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
 
   document.addEventListener('keydown', (e) => {
+    const fsOverlay = document.getElementById('fullscreen-image-overlay');
+    const modal = document.getElementById('lightbox-modal');
+    const isFsOpen = fsOverlay && fsOverlay.classList.contains('open');
+    const isModalOpen = modal && modal.classList.contains('open');
+
     if (e.key === 'Escape') {
-      const fsOverlay = document.getElementById('fullscreen-image-overlay');
-      if (fsOverlay && fsOverlay.classList.contains('open')) {
+      if (isFsOpen) {
         closeFullscreenImage();
-      } else {
+      } else if (isModalOpen) {
         closeLightbox();
+      }
+    } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (isFsOpen || isModalOpen) {
+        nextLightboxSlide(e);
+      }
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      if (isFsOpen || isModalOpen) {
+        prevLightboxSlide(e);
       }
     }
   });
@@ -76,17 +88,66 @@ function initFullscreenOverlay() {
     fsOverlay.className = 'fullscreen-image-overlay';
     fsOverlay.innerHTML = `
       <button class="fullscreen-close-btn" id="fullscreen-close-btn" aria-label="Close Fullscreen">&times;</button>
-      <div class="fullscreen-hint-badge"><i data-lucide="maximize-2" class="icon-inline"></i> Fullscreen Image View • Click anywhere to exit</div>
-      <img id="fullscreen-img" class="fullscreen-img" src="" alt="Fullscreen Image View">
+      
+      <div class="fullscreen-hint-badge" id="fullscreen-hint-badge">
+        <i data-lucide="maximize-2" class="icon-inline"></i>
+        <span id="fullscreen-counter">Fullscreen View</span>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="fullscreen-nav-btn prev-btn" id="fullscreen-prev-btn" aria-label="Previous Image" title="Previous Image (Left Arrow)">
+        <i data-lucide="chevron-left"></i>
+      </button>
+
+      <div class="fullscreen-content-wrap" id="fullscreen-content-wrap">
+        <img id="fullscreen-img" class="fullscreen-img" src="" alt="Fullscreen Image View">
+        <div class="fullscreen-caption-box" id="fullscreen-caption"></div>
+      </div>
+
+      <button class="fullscreen-nav-btn next-btn" id="fullscreen-next-btn" aria-label="Next Image" title="Next Image (Right Arrow)">
+        <i data-lucide="chevron-right"></i>
+      </button>
     `;
     document.body.appendChild(fsOverlay);
 
+    const prevBtn = document.getElementById('fullscreen-prev-btn');
+    const nextBtn = document.getElementById('fullscreen-next-btn');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        prevLightboxSlide(e);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nextLightboxSlide(e);
+      });
+    }
+
+    const contentWrap = document.getElementById('fullscreen-content-wrap');
+    if (contentWrap) {
+      contentWrap.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
+
+    // Clicking overlay backdrop closes it
     fsOverlay.addEventListener('click', (e) => {
-      closeFullscreenImage();
+      if (e.target === fsOverlay) {
+        closeFullscreenImage();
+      }
     });
 
     const closeBtn = document.getElementById('fullscreen-close-btn');
-    if (closeBtn) closeBtn.addEventListener('click', closeFullscreenImage);
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeFullscreenImage();
+      });
+    }
   }
 }
 
@@ -407,18 +468,35 @@ function renderLightboxMedia() {
 
   const isVideoUrl = mediaUrl.toLowerCase().endsWith('.webm') || mediaUrl.toLowerCase().endsWith('.mp4');
 
+  const hasMultiple = gallery.length > 1;
+
   if (isVideoUrl) {
     viewer.innerHTML = `
       <video class="lightbox-video-player" controls autoplay loop src="${mediaUrl}">
         Your browser does not support video playback.
       </video>
+      ${hasMultiple ? `
+        <button class="lightbox-nav-btn prev-btn" onclick="prevLightboxSlide(event)" aria-label="Previous Slide" title="Previous Slide">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button class="lightbox-nav-btn next-btn" onclick="nextLightboxSlide(event)" aria-label="Next Slide" title="Next Slide">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      ` : ''}
     `;
   } else {
     viewer.innerHTML = `
       <img src="${mediaUrl}" alt="${currentItem.caption || currentLightboxProject.title}" class="lightbox-main-img" onclick="openFullscreenImage('${mediaUrl}', '${(currentItem.caption || currentLightboxProject.title).replace(/'/g, "\\'")}')" title="Click to view full screen image">
+      ${hasMultiple ? `
+        <button class="lightbox-nav-btn prev-btn" onclick="prevLightboxSlide(event)" aria-label="Previous Slide" title="Previous Slide">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button class="lightbox-nav-btn next-btn" onclick="nextLightboxSlide(event)" aria-label="Next Slide" title="Next Slide">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      ` : ''}
     `;
   }
-
   if (caption) {
     caption.textContent = currentItem.caption || `${currentGalleryIndex + 1} of ${gallery.length}`;
   }
@@ -450,13 +528,87 @@ function selectGalleryIndex(index) {
   renderLightboxGalleryStrip();
 }
 
+function nextLightboxSlide(e) {
+  if (e) e.stopPropagation();
+  if (!currentLightboxProject) return;
+  const gallery = currentLightboxProject.gallery || [];
+  if (gallery.length <= 1) return;
+
+  currentGalleryIndex = (currentGalleryIndex + 1) % gallery.length;
+  updateActiveSlide();
+}
+
+function prevLightboxSlide(e) {
+  if (e) e.stopPropagation();
+  if (!currentLightboxProject) return;
+  const gallery = currentLightboxProject.gallery || [];
+  if (gallery.length <= 1) return;
+
+  currentGalleryIndex = (currentGalleryIndex - 1 + gallery.length) % gallery.length;
+  updateActiveSlide();
+}
+
+function updateActiveSlide() {
+  renderLightboxMedia();
+  renderLightboxGalleryStrip();
+
+  const fsOverlay = document.getElementById('fullscreen-image-overlay');
+  if (fsOverlay && fsOverlay.classList.contains('open') && currentLightboxProject) {
+    const gallery = currentLightboxProject.gallery || [];
+    const item = gallery[currentGalleryIndex];
+    if (item) {
+      const fsImg = document.getElementById('fullscreen-img');
+      const fsCaption = document.getElementById('fullscreen-caption');
+      const fsCounter = document.getElementById('fullscreen-counter');
+
+      if (fsImg) {
+        fsImg.src = item.url;
+        fsImg.alt = item.caption || currentLightboxProject.title;
+      }
+      if (fsCaption) {
+        fsCaption.textContent = item.caption || '';
+        fsCaption.style.display = item.caption ? 'block' : 'none';
+      }
+      if (fsCounter) {
+        fsCounter.textContent = `${currentGalleryIndex + 1} of ${gallery.length} • Click background to exit`;
+      }
+    }
+  }
+
+  if (window.lucide) lucide.createIcons();
+}
+
 function openFullscreenImage(imgSrc, captionText) {
   const fsOverlay = document.getElementById('fullscreen-image-overlay');
   const fsImg = document.getElementById('fullscreen-img');
+  const fsCaption = document.getElementById('fullscreen-caption');
+  const fsCounter = document.getElementById('fullscreen-counter');
+  const prevBtn = document.getElementById('fullscreen-prev-btn');
+  const nextBtn = document.getElementById('fullscreen-next-btn');
 
   if (fsOverlay && fsImg) {
-    fsImg.src = imgSrc;
-    fsImg.alt = captionText || 'Fullscreen View';
+    const gallery = (currentLightboxProject && currentLightboxProject.gallery) || [];
+    const currentItem = gallery[currentGalleryIndex] || { url: imgSrc, caption: captionText };
+
+    fsImg.src = currentItem.url || imgSrc;
+    fsImg.alt = currentItem.caption || captionText || 'Fullscreen View';
+
+    if (fsCaption) {
+      const text = currentItem.caption || captionText || '';
+      fsCaption.textContent = text;
+      fsCaption.style.display = text ? 'block' : 'none';
+    }
+
+    if (fsCounter) {
+      fsCounter.textContent = gallery.length > 1
+        ? `${currentGalleryIndex + 1} of ${gallery.length} • Click background to exit`
+        : 'Fullscreen View • Click background to exit';
+    }
+
+    const showArrows = gallery.length > 1;
+    if (prevBtn) prevBtn.style.display = showArrows ? 'flex' : 'none';
+    if (nextBtn) nextBtn.style.display = showArrows ? 'flex' : 'none';
+
     fsOverlay.classList.add('open');
 
     if (window.lucide) lucide.createIcons();

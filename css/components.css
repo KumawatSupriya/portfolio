@@ -3165,3 +3165,169 @@
 
 
 
+
+/* ==========================================================================
+   INTERACTIVE GALLERY NAVIGATION BUTTONS (FULLSCREEN & LIGHTBOX)
+   ========================================================================== */
+.fullscreen-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid var(--clr-coral-red);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 25030;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(240, 83, 101, 0.45);
+}
+
+.fullscreen-nav-btn svg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 2.6;
+  transition: transform 0.2s ease;
+}
+
+.fullscreen-nav-btn.prev-btn {
+  left: 2.2rem;
+}
+
+.fullscreen-nav-btn.next-btn {
+  right: 2.2rem;
+}
+
+.fullscreen-nav-btn:hover {
+  background: var(--clr-coral-red);
+  color: #FFFFFF;
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 12px 35px rgba(240, 83, 101, 0.85);
+}
+
+.fullscreen-nav-btn.prev-btn:hover svg {
+  transform: translateX(-4px);
+}
+
+.fullscreen-nav-btn.next-btn:hover svg {
+  transform: translateX(4px);
+}
+
+[data-theme="light"] .fullscreen-nav-btn {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1E293B;
+  border-color: var(--clr-coral-red);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(240, 83, 101, 0.3);
+}
+
+[data-theme="light"] .fullscreen-nav-btn:hover {
+  background: var(--clr-coral-red);
+  color: #FFFFFF;
+}
+
+.fullscreen-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90vw;
+  max-height: 88vh;
+  cursor: default;
+  position: relative;
+  z-index: 25010;
+}
+
+.fullscreen-caption-box {
+  margin-top: 0.9rem;
+  padding: 0.5rem 1.6rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-full);
+  color: #E2E8F0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+}
+
+[data-theme="light"] .fullscreen-caption-box {
+  background: rgba(255, 255, 255, 0.92);
+  color: #1E293B;
+  border-color: rgba(220, 210, 195, 0.8);
+}
+
+/* Lightbox Modal In-Viewer Nav Buttons */
+.lightbox-viewer {
+  position: relative;
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(10, 15, 26, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-nav-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2.4;
+}
+
+.lightbox-nav-btn.prev-btn {
+  left: 0.8rem;
+}
+
+.lightbox-nav-btn.next-btn {
+  right: 0.8rem;
+}
+
+.lightbox-nav-btn:hover {
+  background: var(--clr-coral-red);
+  border-color: var(--clr-coral-red);
+  transform: translateY(-50%) scale(1.12);
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(240, 83, 101, 0.6);
+}
+
+@media (max-width: 768px) {
+  .fullscreen-nav-btn {
+    width: 48px;
+    height: 48px;
+  }
+  .fullscreen-nav-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .fullscreen-nav-btn.prev-btn {
+    left: 0.8rem;
+  }
+  .fullscreen-nav-btn.next-btn {
+    right: 0.8rem;
+  }
+}
